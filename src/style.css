@@ -634,8 +634,8 @@ h1, #nitE{
 }
 
 #tomaCont, #telCliente{
-    min-width: 56mm;
-    max-width: 56mm;
+    min-width: 50mm;
+    max-width: 50mm;
     min-height: 6mm;
     max-height: 6mm;
 }
