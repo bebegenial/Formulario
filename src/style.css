@@ -36,6 +36,7 @@ input{
     background-color: transparent;
     resize: none;
     overflow: hidden;
+    font-size: 70%;
 }
 
 textarea{
