@@ -232,7 +232,7 @@ function resaltarCampos(){
     if($cedula1.value.length === 0){
         $cedula1.style.background = "rgb(255, 209, 209)";
     }else{
-        $cedula1.style.background = "transparent";
+        $cedula1.style.background = "white";
     }
 
     if($relacionista.value.length === 0){
