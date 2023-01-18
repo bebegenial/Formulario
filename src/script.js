@@ -62,10 +62,8 @@ var $ce1 = document.querySelector("#ce1");
 
 var $relacionista = document.querySelector("#tomaCont");
 var $colaborador = document.querySelector("#especialista");
-var $director = document.querySelector("#ddirector");
+var $director = document.querySelector("#director");
 var $organizador = document.querySelector("#telCliente");
-
-var $rematador = document.querySelector("#rematador");
 
 var $cedula2 = document.querySelector("#cedula2");
 var $cc2 = document.querySelector("#cc2");
@@ -161,7 +159,6 @@ function enviarFormulario(){
             "colaborador": $colaborador.value,
             "director": $director.value,
             "organizador": $organizador.value,
-            "rematador": $rematador.value,
             "cedula2": $cedula2.value,
             "cc2": $cc2.value,
             "ce2": $ce2.value,
