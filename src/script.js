@@ -32,9 +32,6 @@ var $cDir = document.querySelector("#direCo");
 var $cCargo = document.querySelector("#cargoCo");
 var $cAntig = document.querySelector("#antiCo");
 var $cSueldo = document.querySelector("#suelCo");
-var $cmarca = document.querySelector("#cmarca");
-var $cModelo = document.querySelector("#cModelo");
-var $cPlaca = document.querySelector("#cPlaca");
 
 var $rNomb1 = document.querySelector("#nombR1");
 var $rp1 = document.querySelector("#ptco1");
@@ -139,9 +136,6 @@ function enviarFormulario(){
             "cCargo": $cCargo.value,
             "cAntig": $cAntig.value,
             "cSueldo": $cSueldo.value,
-            "cmarca": $cmarca.value,
-            "cModelo": $cModelo.value,
-            "cPlaca": $cPlaca.value,
             "rNomb1": $rNomb1.value,
             "r-p-1": $rp1.value,
             "rTele1": $rTele1.value,
