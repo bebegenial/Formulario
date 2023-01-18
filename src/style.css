@@ -816,6 +816,8 @@ li{
 #guardar{
     position: relative;
     display: inline-flex;
+    background-color: black;
+    color: white;
     margin: 0;
 }
 
@@ -842,6 +844,10 @@ li{
     transform: rotate(270deg);
     margin-top: 20mm;
     font-weight: bold;
+}
+
+#guardar:hover{
+    cursor: pointer;
 }
 
 @media screen and (width<900px){
