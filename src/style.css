@@ -352,8 +352,8 @@ h1, #nitE{
 }
 
 #nombCo, #apellCo{
-    min-width: 50mm;
-    max-width: 50mm;
+    min-width: 45mm;
+    max-width: 45mm;
 }
 
 #empCo{
@@ -591,8 +591,8 @@ h1, #nitE{
 }
 
 #nCoutas, #vrCuota{
-    min-width: 24mm;
-    max-width: 24mm;
+    min-width: 20mm;
+    max-width: 20mm;
     min-height: 6mm;
     max-height: 6mm;
 }
@@ -1176,8 +1176,8 @@ li{
     }
     
     #nombCo, #apellCo{
-        min-width: 52mm;
-        max-width: 52mm;
+        min-width: 45mm;
+        max-width: 45mm;
     }
     
     #empCo{
@@ -1287,8 +1287,8 @@ li{
     }
     
     #nombR1, #nombR2, #nombR3, #nombR4{
-        min-width: 35mm;
-        max-width: 35mm;
+        min-width: 32mm;
+        max-width: 32mm;
         min-height: 4.5mm;
         max-height: 4.5mm;
         font-size: 2.5mm;
@@ -1414,8 +1414,8 @@ li{
     }
     
     #nCoutas, #vrCuota{
-        min-width: 24mm;
-        max-width: 24mm;
+        min-width: 20mm;
+        max-width: 20mm;
         min-height: 6mm;
         max-height: 6mm;
     }
