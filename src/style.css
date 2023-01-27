@@ -465,22 +465,24 @@ h1, #nitE{
 }
 
 #nombR1, #nombR2, #nombR3, #nombR4{
-    min-width: 41mm;
-    max-width: 41mm;
+    min-width: 32mm;
+    max-width: 32mm;
     min-height: 4.5mm;
     max-height: 4.5mm;
+    font-size: 2.5mm;
 }
 
 #ptco1, #ptco2, #ptco3, #ptco4{
-    min-width: 13mm;
-    max-width: 13mm;
+    min-width: 15mm;
+    max-width: 15mm;
     min-height: 4.5mm;
     max-height: 4.5mm;
+    font-size: 2.5mm;
 }
 
 #telOR1, #telRR1, #telOR2, #telRR2, #telOR3, #telRR3, #telOR4, #telRR4{
-    min-width: 27mm;
-    max-width: 27mm;
+    min-width: 25mm;
+    max-width: 25mm;
     min-height: 4.5mm;
     max-height: 4.5mm;
 }
@@ -1285,10 +1287,11 @@ li{
     }
     
     #nombR1, #nombR2, #nombR3, #nombR4{
-        min-width: 41mm;
-        max-width: 41mm;
+        min-width: 35mm;
+        max-width: 35mm;
         min-height: 4.5mm;
         max-height: 4.5mm;
+        font-size: 2.5mm;
     }
     
     #ptco1, #ptco2, #ptco3, #ptco4{
@@ -1296,13 +1299,15 @@ li{
         max-width: 13mm;
         min-height: 4.5mm;
         max-height: 4.5mm;
+        font-size: 2.5mm;
     }
     
     #telOR1, #telRR1, #telOR2, #telRR2, #telOR3, #telRR3, #telOR4, #telRR4{
-        min-width: 27mm;
-        max-width: 27mm;
+        min-width: 26mm;
+        max-width: 26mm;
         min-height: 4.5mm;
         max-height: 4.5mm;
+        font-size: 2.5mm;
     }
     
     .obras{
