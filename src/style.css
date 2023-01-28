@@ -827,7 +827,7 @@ li{
 #guardar{
     position: relative;
     display: inline-flex;
-    background-color: gray;
+    background: gray;
     color: white;
     margin: 0;
     width: 14mm;
@@ -862,6 +862,12 @@ li{
 
 #guardar:hover{
     cursor: pointer;
+}
+
+#guardar:active {
+    visibility: hidden;
+    transition-duration: 3s;
+    visibility: visible;
 }
 
 @media screen and (width<900px){
@@ -1648,6 +1654,16 @@ li{
         position: relative;
         display: inline-flex;
         margin: 0 2mm 0 2mm;
+    }
+
+    #guardar:hover{
+        cursor: pointer;
+    }
+
+    #guardar:active {
+        visibility: hidden;
+        transition-duration: 3s;
+        visibility: visible;
     }
     
     .derP{
