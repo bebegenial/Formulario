@@ -126,7 +126,8 @@ h1, #nitE{
 
 #pedido, #fecha, #cuenta{
     height: 4mm;
-    width: 50mm;
+    width: 50mm;    
+    text-align: center;
     border-bottom: 1px black solid;
     background-color: transparent;
 }
@@ -830,7 +831,8 @@ li{
     color: white;
     margin: 0;
     width: 14mm;
-    height: 7mm;    
+    height: 7mm;  
+    padding-left: 1.5mm;  
 }
 
 .derP{
