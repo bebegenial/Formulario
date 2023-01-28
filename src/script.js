@@ -89,15 +89,16 @@ $botonGuardar.onclick = ejecFunc;
 
 
 function guardarPdf(){
-    /*$botonGuardar.style.visibility = "hidden";*/
-    $botonGuardar.style.background = "transparent";
+    
+    $botonGuardar.style.background = "#CFE6F9";
     $botonGuardar.style.color = "#CFE6F9";
+    $botonGuardar.style.visibility = "hidden";
 
     window.print();
-
-    /*$botonGuardar.style.visibility = "visible";*/
+    
     $botonGuardar.style.background = "black";
     $botonGuardar.style.color = "white";
+    $botonGuardar.style.visibility = "visible";
 
 }
 
