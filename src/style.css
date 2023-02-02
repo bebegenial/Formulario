@@ -2,8 +2,10 @@ html, body{
     position: absolute;
     min-width: 216mm;
     max-width: 216mm;
-    min-height: 330mm;
-    max-height: 330mm;
+    /*min-height: 330mm;
+    max-height: 330mm;*/
+    min-height: 990mm;
+    max-height: 990mm;
 }
 
 * {
@@ -15,14 +17,13 @@ html, body{
 
 form{
     position: relative;
-    min-width: 195mm;
-    max-width: 195mm;
-    min-height: 304mm;
-    max-height: 304mm;
+    min-width: 196mm;
+    max-width: 196mm;
+    min-height: 328.8mm;
+    max-height: 328.8mm;
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
     margin: auto;
 }
 
@@ -118,6 +119,7 @@ h1, #nitE{
     text-align: center;
     font-weight: bold;
     margin-bottom: 1mm;
+    font-size: 100%;
 }
 
 #fecha{
@@ -137,8 +139,8 @@ h1, #nitE{
     position: relative;
     min-width: 195mm;
     max-width: 195mm;
-    min-height: 37mm;
-    max-height: 37mm;
+    min-height: 36mm;
+    max-height: 36mm;
     border: 2px black solid;
     border-radius: 3mm;
     background-color: #CFE6F9;
@@ -151,7 +153,7 @@ h1, #nitE{
     max-width: 195mm;
     min-height: 7mm;
     max-height: 7mm;
-    border: 1px solid;
+    border-bottom: 1px solid;
 }
 
 .divMitadI{
@@ -167,6 +169,8 @@ h1, #nitE{
 #nombre, #apellido{
     min-width: 80mm;
     max-width: 80mm;
+    font-weight: bold;
+    font-size: 80%;
 }
 
 .divMitadD{
@@ -181,6 +185,7 @@ h1, #nitE{
 #direccion{
     min-width: 69mm;
     max-width: 69mm;
+    font-weight: bold;
 }
 
 .div26{
@@ -197,6 +202,7 @@ h1, #nitE{
 #celular, #telefonoEmp{
     min-width: 24mm;
     max-width: 24mm;
+    font-weight: bold;
     font-size: 65%;
 }
 
@@ -213,17 +219,20 @@ h1, #nitE{
 #barrio{
     min-width: 40mm;
     max-width: 40mm;
+    font-weight: bold;
     font-size: 65%;
 }
 
 #empresa{
     min-width: 79mm;
     max-width: 79mm;
+    font-weight: bold;
 }
 
 #dirEmpr{
     min-width: 38mm;
     max-width: 38mm;
+    font-weight: bold;
 }
 
 .div56-2{
@@ -232,6 +241,7 @@ h1, #nitE{
 #cargo{
     min-width: 40mm;
     max-width: 40mm;
+    font-weight: bold;
 }
 
 .div26-2{
@@ -246,11 +256,13 @@ h1, #nitE{
 #antiguedad{
     min-width: 19mm;
     max-width: 19mm;
+    font-weight: bold;
 }
 
 #sueldo{
     min-width: 23mm;
     max-width: 23mm;
+    font-weight: bold;
 }
 
 #labelcasa, #labelempresa{
@@ -275,12 +287,14 @@ h1, #nitE{
     max-width: 195mm;
     min-height: 7mm;
     max-height: 7mm;
-    border-top: 1px solid;
+    /*border-top: 1px solid;*/
 }
 
 #email{
     min-width: 79mm;
     max-width: 79mm;
+    font-weight: bold;
+    font-size: 80%;
 }
 
 #fCobro{
@@ -314,13 +328,15 @@ h1, #nitE{
 #nino{
     min-width: 105mm;
     max-width: 105mm;
+    font-weight: bold;
+    font-size: 80%;
 }
 
 .ciudad{
     display: inline-block;
     position: relative;
-    min-height: 7mm;
-    max-height: 7mm;
+    min-height: 6.5mm;
+    max-height: 6.5mm;
     min-width: 55mm;
     max-width: 55mm;
     background-color: white;
@@ -331,6 +347,7 @@ h1, #nitE{
 #ciudad{
     min-width: 40mm;
     max-width: 40mm;
+    font-weight: bold;
 }
 
 .conyCodeudor{
@@ -380,7 +397,7 @@ h1, #nitE{
     max-width: 195mm;
     min-height: 7mm;
     max-height: 7mm;
-    border-top: 1px solid;
+    /*border-top: 1px solid;*/
 }
 
 .carAntSuel{
@@ -870,6 +887,41 @@ li{
     visibility: visible;
 }
 
+.imgcedula1, .comPago{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#imgfile, #imgfile2, #pagofile{
+    display: inline-block;
+    margin-top: 25mm;
+}
+
+#visual1, #visual2{
+    display: block;
+    left: 0;
+    right: 0;
+    margin: auto;
+    max-width: 140mm;
+    min-width: 140mm;
+    max-height: 100mm;
+    min-height: 100mm;
+}
+
+#pago1{
+    display: block;
+    left: 0;
+    right: 0;
+    margin: auto;
+    max-width: 100mm;
+    min-width: 100mm;
+    max-height: 200mm;
+    min-height: 200mm;
+}
+
 @media screen and (width<900px){
     input{
         border: none;
@@ -956,6 +1008,7 @@ li{
         text-align: center;
         font-weight: bold;
         margin-bottom: 1mm;
+        font-size: 100%;
     }
     
     #fecha{
@@ -974,8 +1027,8 @@ li{
         position: relative;
         min-width: 195mm;
         max-width: 195mm;
-        min-height: 37mm;
-        max-height: 37mm;
+        min-height: 36mm;
+        max-height: 36mm;
         border: 2px black solid;
         border-radius: 3mm;
         background-color: #CFE6F9;
@@ -988,7 +1041,7 @@ li{
         max-width: 195mm;
         min-height: 7mm;
         max-height: 7mm;
-        border: 1px solid;
+        border-bottom: 1px solid;
     }
     
     .divMitadI{
@@ -1004,6 +1057,8 @@ li{
     #nombre, #apellido{
         min-width: 82mm;
         max-width: 82mm;
+        font-weight: bold;
+        font-size: 80%;
     }
     
     .divMitadD{
@@ -1018,6 +1073,7 @@ li{
     #direccion{
         min-width: 74mm;
         max-width: 74mm;
+        font-weight: bold;
     }
     
     .div26{
@@ -1034,6 +1090,7 @@ li{
     #celular, #telefonoEmp{
         min-width: 24mm;
         max-width: 24mm;
+        font-weight: bold;
         font-size: 65%;
     }
     
@@ -1050,16 +1107,19 @@ li{
     #barrio{
         min-width: 43mm;
         max-width: 43mm;
+        font-weight: bold;
         font-size: 65%;
     }
     
     #empresa{
         min-width: 81mm;
+        font-weight: bold;
         max-width: 81mm;
     }
     
     #dirEmpr{
         min-width: 40mm;
+        font-weight: bold;
         max-width: 40mm;
     }
     
@@ -1069,6 +1129,7 @@ li{
     #cargo{
         min-width: 43mm;
         max-width: 43mm;
+        font-weight: bold;
     }
     
     .div26-2{
@@ -1083,11 +1144,13 @@ li{
     #antiguedad{
         min-width: 22mm;
         max-width: 22mm;
+        font-weight: bold;
     }
     
     #sueldo{
         min-width: 27mm;
         max-width: 27mm;
+        font-weight: bold;
     }
     
     #propia, #alquilada, #cCasa, #cEmpresa{
@@ -1106,12 +1169,14 @@ li{
         max-width: 195mm;
         min-height: 7mm;
         max-height: 7mm;
-        border-top: 1px solid;
+        /*border-top: 1px solid;*/
     }
     
     #email{
         min-width: 80mm;
         max-width: 80mm;
+        font-size: 80%;
+        font-weight: bold;
     }
     
     #fCobro{
@@ -1145,13 +1210,14 @@ li{
     #nino{
         min-width: 109mm;
         max-width: 109mm;
+        font-weight: bold;
     }
     
     .ciudad{
         display: inline-block;
         position: relative;
-        min-height: 7mm;
-        max-height: 7mm;
+        min-height: 6.5mm;
+        max-height: 6.5mm;
         min-width: 55mm;
         max-width: 55mm;
         background-color: white;
@@ -1162,6 +1228,7 @@ li{
     #ciudad{
         min-width: 40mm;
         max-width: 40mm;
+        font-weight: bold;
     }
     
     .conyCodeudor{
@@ -1211,7 +1278,7 @@ li{
         max-width: 195mm;
         min-height: 7mm;
         max-height: 7mm;
-        border-top: 1px solid;
+        /*border-top: 1px solid;*/
     }
     
     .carAntSuel{

@@ -74,6 +74,10 @@ var $cedula4 = document.querySelector("#cedula4");
 let $inputs = document.querySelector(".inputs");
 const formulario = document.getElementById(".formulario");
 
+var $imgcedula1 = document.querySelector("#imgfile");
+var $imgcedula2 = document.querySelector("#imgfile2");
+var $imgpago = document.querySelector("#pagofile");
+
 function ejecFunc(){
     if(validarCampos()===true){
         resaltarCampos();
@@ -244,3 +248,21 @@ function resaltarCampos(){
         $colaborador.style.background = "transparent";
     }
 }
+
+$imgcedula1.addEventListener('change', ()=>{
+    let imgfile1 = $imgcedula1.files[0];
+    let imgfileURL1 = URL.createObjectURL(imgfile1);
+    document.querySelector("#visual1").setAttribute('src',imgfileURL1);
+})
+
+$imgcedula2.addEventListener('change', ()=>{
+    let imgfile2 = $imgcedula2.files[0];
+    let imgfileURL2 = URL.createObjectURL(imgfile2);
+    document.querySelector("#visual2").setAttribute('src',imgfileURL2);
+})
+
+$imgpago.addEventListener('change', ()=>{
+    let pago = $imgpago.files[0];
+    let pagoURL2 = URL.createObjectURL(pago);
+    document.querySelector("#pago1").setAttribute('src',pagoURL2);
+})
