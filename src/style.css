@@ -905,8 +905,8 @@ li{
     left: 0;
     right: 0;
     margin: auto;
-    max-width: 140mm;
-    min-width: 140mm;
+    max-width: 160mm;
+    min-width: 160mm;
     max-height: 100mm;
     min-height: 100mm;
 }

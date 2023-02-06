@@ -97,13 +97,18 @@ function guardarPdf(){
     $botonGuardar.style.background = "#CFE6F9";
     $botonGuardar.style.color = "#CFE6F9";
     $botonGuardar.style.visibility = "hidden";
+    $imgcedula1.style.visibility = "hidden";
+    $imgcedula2.style.visibility = "hidden";
+    $imgpago.style.visibility = "hidden";
 
     window.print();
     
     $botonGuardar.style.background = "gray";
     $botonGuardar.style.color = "white";
     $botonGuardar.style.visibility = "visible";
-
+    $imgcedula1.style.visibility = "visible";
+    $imgcedula2.style.visibility = "visible";
+    $imgpago.style.visibility = "visible";
 }
 
 function enviarFormulario(){
