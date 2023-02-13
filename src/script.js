@@ -82,7 +82,7 @@ function ejecFunc(){
     if(validarCampos()===true){
         resaltarCampos();
         guardarPdf();
-        //enviarFormulario();
+        enviarFormulario();
     }else{
         alert("Debes llenar todos los campos requeridos")
         resaltarCampos();
