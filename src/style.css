@@ -347,7 +347,7 @@ h1, #nitE{
 #ciudad{
     min-width: 40mm;
     max-width: 40mm;
-    font-weight: bold;
+    font-size: 2.5mm;
 }
 
 .conyCodeudor{
@@ -1228,7 +1228,7 @@ li{
     #ciudad{
         min-width: 40mm;
         max-width: 40mm;
-        font-weight: bold;
+        font-size: 2.5mm;
     }
     
     .conyCodeudor{
