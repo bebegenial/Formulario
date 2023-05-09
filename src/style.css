@@ -887,6 +887,25 @@ li{
     visibility: visible;
 }
 
+.articulos{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2px red;
+    min-width: 196mm;
+    max-width: 196mm;
+    min-height: 328.8mm;
+    max-height: 328.8mm;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border: solid 1px rgb(211, 210, 210);
+}
+
+
 .imgcedula1, .comPago{
     display: flex;
     flex-direction: column;
