@@ -940,6 +940,7 @@ li{
     min-height: 200mm;
 }
 
+
 @media screen and (width<900px){
     input{
         border: none;
