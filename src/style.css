@@ -551,6 +551,7 @@ h1, #nitE{
     min-height: 30mm;
     max-height: 30mm;
     margin: 0;
+    font-size: 80%;
 }
 
 #detValor{
@@ -640,6 +641,7 @@ h1, #nitE{
     background-color: transparent;
     border-radius: 3mm;
     border: transparent;
+    font-size: 90%;
 }
 
 .relacionista, .especialista, .director{
@@ -1453,6 +1455,7 @@ li{
         min-height: 30mm;
         max-height: 30mm;
         margin: 0;
+        font-size: 80%;
     }
     
     #detValor{
@@ -1542,6 +1545,7 @@ li{
         background-color: transparent;
         border-radius: 3mm;
         border: transparent;
+        font-size: 90%;
     }
     
     .relacionista, .especialista, .director{
