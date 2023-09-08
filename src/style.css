@@ -628,6 +628,7 @@ h1, #nitE{
     border: 1px black solid;
     border-radius: 3mm;
     margin-top: 1mm;
+    font-size: 90%;
 }
 
 #observ{
@@ -1532,6 +1533,7 @@ li{
         border: 1px black solid;
         border-radius: 3mm;
         margin-top: 1mm;
+        font-size: 90%;
     }
     
     #observ{
