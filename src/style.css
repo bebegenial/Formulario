@@ -71,6 +71,10 @@ img{
     /*margin: auto;*/
 }
 
+p {
+    font-size: 13px;
+}
+
 .datoEmp{
     position: relative;
     min-width: 88mm;
