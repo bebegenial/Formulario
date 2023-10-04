@@ -4,8 +4,8 @@ html, body{
     max-width: 216mm;
     /*min-height: 330mm;
     max-height: 330mm;*/
-    min-height: 990mm;
-    max-height: 990mm;
+    min-height: 1400mm;
+    max-height: 1400mm;
 }
 
 * {
@@ -15,12 +15,12 @@ html, body{
     forced-color-adjust: exact !important;
 }
 
-form{
+.formulario{
     position: relative;
     min-width: 196mm;
     max-width: 196mm;
-    min-height: 328.8mm;
-    max-height: 328.8mm;
+    min-height: 350mm;
+    max-height: 350mm;
     top: 0;
     left: 0;
     right: 0;
@@ -72,7 +72,7 @@ img{
 }
 
 p {
-    font-size: 13px;
+    font-size: 16px;
 }
 
 .datoEmp{
@@ -905,8 +905,8 @@ li{
     margin: 2px red;
     min-width: 196mm;
     max-width: 196mm;
-    min-height: 328.8mm;
-    max-height: 328.8mm;
+    min-height: 400mm;
+    max-height: 400mm;
     top: 0;
     left: 0;
     right: 0;
@@ -919,6 +919,18 @@ li{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: auto;
+    min-height: 340mm;
+    max-height: 340mm;
+    min-width: 196mm;
+    max-width: 196mm;
+}
+
+.comPago{
+    /*page-break-before:always;*/
+    padding-top: 150px;
+    min-height: 250mm;
+    max-height: 250mm;
 }
 
 
@@ -947,6 +959,13 @@ li{
     min-width: 100mm;
     max-height: 200mm;
     min-height: 200mm;
+}
+
+@media print {
+    /* Ajustar el tamaño de la página a oficio */
+    @page {
+        size: legal; /* Tamaño de página oficio */
+    }
 }
 
 
