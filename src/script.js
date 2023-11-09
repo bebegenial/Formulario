@@ -1,10 +1,4 @@
 var $botonGuardar = document.querySelector("#guardar");
-var modal = document.getElementById('myModal');
-var opcion1Button = document.getElementById('opcion1');
-var opcion2Button = document.getElementById('opcion2');
-var opcion3Button = document.getElementById('opcion3');
-var opcion4Button = document.getElementById('opcion4');
-
 var $pedido = document.querySelector("#pedido");
 var $fecha = document.querySelector("#fecha");
 var $cuenta = document.querySelector("#cuenta");
@@ -80,31 +74,26 @@ var $cedula4 = document.querySelector("#cedula4");
 let $inputs = document.querySelector(".inputs");
 const formulario = document.getElementById(".formulario");
 
-var $detColec = document.getElementById('detColec');
-var $detValor = document.getElementById('detValor');
-var $totalVal = document.getElementById('totalVal');
-var $nCoutas = document.getElementById('nCoutas');
-var $vrCuota = document.getElementById('vrCuota');
-var $observ = document.getElementById('observ');
-
-
 var $imgcedula1 = document.querySelector("#imgfile");
 var $imgcedula2 = document.querySelector("#imgfile2");
 var $imgpago = document.querySelector("#pagofile");
 
-function ejecFunc() {
-    /*if(validarCampos()===true){
+function ejecFunc(){
+    if(validarCampos()===true){
         resaltarCampos();
         guardarPdf();
+        enviarFormulario();
     }else{
         alert("Debes llenar todos los campos requeridos")
         resaltarCampos();
-    }*/
+    }
 }
-//$botonGuardar.onclick = ejecFunc;
+$botonGuardar.onclick = ejecFunc;
 
-async function guardarPdf() {
 
+
+function guardarPdf(){
+    
     $botonGuardar.style.background = "#CFE6F9";
     $botonGuardar.style.color = "#CFE6F9";
     $botonGuardar.style.visibility = "hidden";
@@ -113,7 +102,7 @@ async function guardarPdf() {
     $imgpago.style.visibility = "hidden";
 
     window.print();
-
+    
     $botonGuardar.style.background = "gray";
     $botonGuardar.style.color = "white";
     $botonGuardar.style.visibility = "visible";
@@ -122,206 +111,163 @@ async function guardarPdf() {
     $imgpago.style.visibility = "visible";
 }
 
-function validarCampos() {
-    if ($nombre1.value.length === 0 || $apellido.value.length === 0 || $direccion.value.length === 0 || $telefono.value.length === 0 
-        || $email.value.length === 0 || $ciudad.value.length === 0 || $cedula1.value.length === 0 || $relacionista.value.length === 0 
-        || $colaborador.value.length === 0 || $fecha.value.length === 0 || $fCobro.value.length === 0) {
+function enviarFormulario(){
+    /*$botonGuardar.addEventListener("click", () => {
+        alert("prueba");
+    })*/
+
+    fetch('https://sheet.best/api/sheets/2a78aa3b-bb70-4d14-bddc-0fed465394da',{
+        method: "POST",
+        mode: "cors",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            "pedido": $pedido.value,
+            "fecha": $fecha.value,
+            "cuenta": $cuenta.value,
+            "nombre1": $nombre1.value,
+            "apellido": $apellido.value,
+            "direccion": $direccion.value,
+            "telefono": $telefono.value,
+            "barrio": $barrio.value,
+            "empresa": $empresa.value,
+            "telefono2": $telefono2.value,
+            "direccion2": $direccion2.value,
+            "cargo": $cargo.value,
+            "antiguo": $antiguo.value,
+            "sueldo": $sueldo.value,
+            "email": $email.value,
+            "fCobro": $fCobro.value,
+            "nNino": $nNino.value,
+            "ciudad": $ciudad.value,
+            "cNomb": $cNomb.value,
+            "cApell": $cApell.value,
+            "cEmpresa": $cEmpresa.value,
+            "cTele": $ctele.value,
+            "cDir": $cDir.value,
+            "cCargo": $cCargo.value,
+            "cAntig": $cAntig.value,
+            "cSueldo": $cSueldo.value,
+            "rNomb1": $rNomb1.value,
+            "r-p-1": $rp1.value,
+            "rTele1": $rTele1.value,
+            "rTele-res1": $rTeleres1.value,
+            "rNomb2": $rNomb2.value,
+            "r-p-2": $rp2.value,
+            "rTele2": $rTele2.value,
+            "rTele-res2": $rTeleres2.value,
+            "rNomb3": $rNomb3.value,
+            "r-p-3": $rp3.value,
+            "rTele3": $rTele3.value,
+            "rTele-res3": $rTeleres3.value,
+            "rNomb4": $rNomb4.value,
+            "r-p-4": $rp4.value,
+            "rTele4": $rTele4.value,
+            "rTele-res4": $rTeleres4.value,
+            "oCuotas": $oCuotas.value,
+            "oValor": $oValor.value,
+            "cedula1": $cedula1.value,
+            "cc1": $cc1.value,
+            "ce1": $ce1.value,
+            "relacionista": $relacionista.value,
+            "colaborador": $colaborador.value,
+            "director": $director.value,
+            "organizador": $organizador.value,
+            "cedula2": $cedula2.value,
+            "cc2": $cc2.value,
+            "ce2": $ce2.value,
+            "cedula3": $cedula3.value,
+            "cedula4": $cedula4.value,
+                       
+        })
+    });
+}
+
+function validarCampos(){
+    if($pedido.value.length === 0 || $nombre1.value.length === 0 || $apellido.value.length === 0 || $direccion.value.length === 0 || $telefono.value.length === 0 || $email.value.length === 0 || $ciudad.value.length === 0 || $cedula1.value.length === 0 || $relacionista.value.length === 0 || $colaborador.value.length === 0){
         return false;
-    } else {
-        //$pedido.value = (parseInt(pedidos[pedidos.length - 1].pedido) + 1);
+    }else{
         return true;
     }
 }
 
-async function resaltarCampos() {
-    /*if($pedido.value.length === 0){
+function resaltarCampos(){
+    if($pedido.value.length === 0){
         $pedido.style.background = "rgb(255, 209, 209)";
     }else{
         $pedido.style.background = "transparent";
-    }*/
-
-    if ($fecha.value.length === 0) {
-        $fecha.style.background = "rgb(255, 209, 209)";
-    } else {
-        $fecha.style.background = "transparent";
     }
 
-    if ($fCobro.value.length === 0) {
-        $fCobro.style.background = "rgb(255, 209, 209)";
-    } else {
-        $fCobro.style.background = "transparent";
-    }
-
-    if ($nombre1.value.length === 0) {
+    if($nombre1.value.length === 0){
         $nombre1.style.background = "rgb(255, 209, 209)";
-    } else {
+    }else{
         $nombre1.style.background = "transparent";
     }
 
-    if ($apellido.value.length === 0) {
+    if($apellido.value.length === 0){
         $apellido.style.background = "rgb(255, 209, 209)";
-    } else {
+    }else{
         $apellido.style.background = "transparent";
     }
 
-    if ($direccion.value.length === 0) {
+    if($direccion.value.length === 0){
         $direccion.style.background = "rgb(255, 209, 209)";
-    } else {
+    }else{
         $direccion.style.background = "transparent";
     }
 
-    if ($telefono.value.length === 0) {
+    if($telefono.value.length === 0){
         $telefono.style.background = "rgb(255, 209, 209)";
-    } else {
+    }else{
         $telefono.style.background = "transparent";
     }
 
-    if ($email.value.length === 0) {
+    if($email.value.length === 0){
         $email.style.background = "rgb(255, 209, 209)";
-    } else {
+    }else{
         $email.style.background = "transparent";
     }
 
-    if ($ciudad.value.length === 0) {
+    if($ciudad.value.length === 0){
         $ciudad.style.background = "rgb(255, 209, 209)";
-    } else {
+    }else{
         $ciudad.style.background = "transparent";
     }
 
-    if ($cedula1.value.length === 0) {
+    if($cedula1.value.length === 0){
         $cedula1.style.background = "rgb(255, 209, 209)";
-    } else {
+    }else{
         $cedula1.style.background = "white";
     }
 
-    if ($relacionista.value.length === 0) {
+    if($relacionista.value.length === 0){
         $relacionista.style.background = "rgb(255, 209, 209)";
-    } else {
+    }else{
         $relacionista.style.background = "transparent";
     }
 
-    if ($colaborador.value.length === 0) {
+    if($colaborador.value.length === 0){
         $colaborador.style.background = "rgb(255, 209, 209)";
-    } else {
+    }else{
         $colaborador.style.background = "transparent";
     }
 }
 
-$imgcedula1.addEventListener('change', () => {
+$imgcedula1.addEventListener('change', ()=>{
     let imgfile1 = $imgcedula1.files[0];
     let imgfileURL1 = URL.createObjectURL(imgfile1);
-    document.querySelector("#visual1").setAttribute('src', imgfileURL1);
+    document.querySelector("#visual1").setAttribute('src',imgfileURL1);
 })
 
-$imgcedula2.addEventListener('change', () => {
+$imgcedula2.addEventListener('change', ()=>{
     let imgfile2 = $imgcedula2.files[0];
     let imgfileURL2 = URL.createObjectURL(imgfile2);
-    document.querySelector("#visual2").setAttribute('src', imgfileURL2);
+    document.querySelector("#visual2").setAttribute('src',imgfileURL2);
 })
 
-$imgpago.addEventListener('change', () => {
+$imgpago.addEventListener('change', ()=>{
     let pago = $imgpago.files[0];
     let pagoURL2 = URL.createObjectURL(pago);
-    document.querySelector("#pago1").setAttribute('src', pagoURL2);
+    document.querySelector("#pago1").setAttribute('src',pagoURL2);
 })
-
-
-// Mostrar el modal al hacer clic en el botón "Guardar"
-$botonGuardar.addEventListener('click', function () {
-    modal.style.display = 'block';
-});
-
-//Autenticacion
-opcion1Button.addEventListener('click', function () {
-    modal.style.display = 'none';
-    handleAuthClick();
-    if (pedidos !== undefined) {
-        opcion1Button.style.display = "none";
-    }
-});
-
-//Nuevo Pedido
-opcion2Button.addEventListener('click', function (event) {
-    
-    if (!pedidos) {
-        //validar si inicio sesion
-        event.preventDefault(); // Evitar la recarga de la página
-        alert("¡Debes Registrarte!")
-        handleAuthClick();        
-    } else {
-        // Realizar acciones relacionadas con la Opción Nuevo Pedido
-        modal.style.display = 'none';
-        if (validarCampos() === true) {
-            event.preventDefault(); // Evitar la recarga de la página
-            resaltarCampos();
-            nuevoPedido();
-            guardarPdf();     
-        } else {
-            event.preventDefault(); // Evitar la recarga de la página
-            alert("Debes llenar todos los campos requeridos")
-            resaltarCampos();
-        }
-    }
-
-});
-
-//Buscar Pedido
-opcion3Button.addEventListener('click', function (event) {
-    if (!pedidos) {
-        event.preventDefault(); // Evitar la recarga de la página
-        //validar si inicio sesion
-        alert("¡Debes Registrarte!")
-        handleAuthClick();
-    } else {
-        event.preventDefault(); // Evitar la recarga de la página
-        buscarPedido();
-        modal.style.display = 'none';
-        // Realizar acciones relacionadas con la Opción Buscar Pedido
-    }
-});
-
-//Actualizar Pedido
-opcion4Button.addEventListener('click', function (event) {
-    if (!pedidos) {
-        event.preventDefault(); // Evitar la recarga de la página
-        //validar si inicio sesion
-        alert("¡Debes Registrarte!")
-        handleAuthClick();
-    } else if(validarCampos() === true) {
-        event.preventDefault(); // Evitar la recarga de la página
-        modal.style.display = 'none';
-        editPedidos();        
-    } else {
-        event.preventDefault(); // Evitar la recarga de la página
-        alert("Debes llenar todos los campos requeridos")
-        resaltarCampos();
-    }
-});
-
-// Cerrar el modal al hacer clic fuera del contenido del modal
-window.addEventListener('click', function (event) {
-    if (event.target === modal) {
-        modal.style.display = 'none';
-    }
-});
-
-//Carga de Opciones al momento de ingresar a la pagina
-window.onload = function () {
-    modal.style.display = 'block'
-};
-
-// Agregar un controlador de eventos para el evento keydown en el documento
-document.addEventListener('keydown', function (event) {
-    // Verificar si se presiona la tecla Control (o Command en macOS) y la letra "P" (código de tecla 80)
-    if ((event.ctrlKey || event.metaKey) && event.key === 'p') {
-        // Anular la acción predeterminada (impresión)
-        event.preventDefault();
-        console.log('La combinación de teclas Control + P está deshabilitada.');
-    }
-});
-
-//bloqueando la ejecucion del boton derecho
-window.addEventListener('contextmenu', function (e) {
-    e.preventDefault();
-    modal.style.display = 'block';
-});

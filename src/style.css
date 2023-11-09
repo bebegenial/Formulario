@@ -2,10 +2,10 @@ html, body{
     position: absolute;
     min-width: 216mm;
     max-width: 216mm;
+    /*min-height: 330mm;
+    max-height: 330mm;*/
     min-height: 1400mm;
     max-height: 1400mm;
-    margin: 1mm 0 0 0;
-    padding: 0;
 }
 
 * {
@@ -29,9 +29,11 @@ form{
 
 input{
     border: none;
+    /*border-bottom: 1px black solid;*/
     height: 5mm;
     margin: 0.2mm 0 0 0;
     padding: 0;
+    /*background-color: #CFE6F9;*/
     background-color: transparent;
     resize: none;
     overflow: hidden;
@@ -64,7 +66,9 @@ img{
     max-width: 32mm;
     max-height: 20mm;
     display: inline-block;
+    /*top: 0;*/
     bottom: 0;
+    /*margin: auto;*/
 }
 
 p {
@@ -77,7 +81,9 @@ p {
     max-width: 88mm;
     min-height: 20mm;
     max-height: 20mm;
+    /*top: 0;*/
     bottom: 0;
+    /*margin: auto;*/
     text-align: center;
     display: inline-block;
 }
@@ -165,11 +171,10 @@ h1, #nitE{
 }
 
 #nombre, #apellido{
-    min-width: 81mm;
-    max-width: 81mm;
+    min-width: 80mm;
+    max-width: 80mm;
     font-weight: bold;
     font-size: 80%;
-    text-align: center;
 }
 
 .divMitadD{
@@ -182,8 +187,8 @@ h1, #nitE{
 }
 
 #direccion{
-    min-width: 73mm;
-    max-width: 73mm;
+    min-width: 69mm;
+    max-width: 69mm;
     font-weight: bold;
     font-size: 2.2mm;
 }
@@ -217,8 +222,8 @@ h1, #nitE{
 }
 
 #barrio{
-    min-width: 42mm;
-    max-width: 42mm;
+    min-width: 40mm;
+    max-width: 40mm;
     font-weight: bold;
     font-size: 65%;
     font-size: 2.3mm;
@@ -240,8 +245,8 @@ h1, #nitE{
     border-right: 1px black solid;
 }
 #cargo{
-    min-width: 42mm;
-    max-width: 42mm;
+    min-width: 40mm;
+    max-width: 40mm;
     font-weight: bold;
 }
 
@@ -255,14 +260,14 @@ h1, #nitE{
 }
 
 #antiguedad{
-    min-width: 21mm;
-    max-width: 21mm;
+    min-width: 19mm;
+    max-width: 19mm;
     font-weight: bold;
 }
 
 #sueldo{
-    min-width: 26mm;
-    max-width: 26mm;
+    min-width: 23mm;
+    max-width: 23mm;
     font-weight: bold;
 }
 
@@ -288,11 +293,12 @@ h1, #nitE{
     max-width: 195mm;
     min-height: 7mm;
     max-height: 7mm;
+    /*border-top: 1px solid;*/
 }
 
 #email{
-    min-width: 84mm;
-    max-width: 84mm;
+    min-width: 79mm;
+    max-width: 79mm;
     font-weight: bold;
     font-size: 80%;
 }
@@ -326,8 +332,8 @@ h1, #nitE{
 }
 
 #nino{
-    min-width: 109mm;
-    max-width: 109mm;
+    min-width: 105mm;
+    max-width: 105mm;
     font-weight: bold;
     font-size: 65%;
 }
@@ -370,9 +376,8 @@ h1, #nitE{
 }
 
 #nombCo, #apellCo{
-    min-width: 47mm;
-    max-width: 47mm;
-    text-align: center;
+    min-width: 45mm;
+    max-width: 45mm;
 }
 
 #empCo{
@@ -381,8 +386,8 @@ h1, #nitE{
 }
 
 #telCo{
-    min-width: 25mm;
-    max-width: 25mm;
+    min-width: 24mm;
+    max-width: 24mm;
     font-size: 65%;
 }
 
@@ -398,6 +403,7 @@ h1, #nitE{
     max-width: 195mm;
     min-height: 7mm;
     max-height: 7mm;
+    /*border-top: 1px solid;*/
 }
 
 .carAntSuel{
@@ -405,8 +411,8 @@ h1, #nitE{
 }
 
 #cargoCo{
-    min-width: 43mm;
-    max-width: 43mm;
+    min-width: 38mm;
+    max-width: 38mm;
 }
 
 #antiCo{
@@ -415,8 +421,8 @@ h1, #nitE{
 }
 
 #suelCo{
-    min-width: 28mm;
-    max-width: 28mm;
+    min-width: 25mm;
+    max-width: 25mm;
 }
 
 #autosi, #autono{
@@ -429,6 +435,7 @@ h1, #nitE{
 }
 
 .reObReCo{
+    /*display: flex;*/
     display: block;
     position: relative;
     margin-top: 1mm;
@@ -447,6 +454,7 @@ h1, #nitE{
     max-width: 83mm;
     min-height: 167mm;
     max-height: 167mm;
+    /*border: 2px red solid;*/
     border-radius: 3mm;
 }
 
@@ -472,6 +480,7 @@ h1, #nitE{
 }
 
 .datoReferidoF{
+    text-align: center;
     position: relative;
     min-width: 82mm;
     max-width: 82mm;
@@ -488,8 +497,8 @@ h1, #nitE{
 }
 
 #ptco1, #ptco2, #ptco3, #ptco4{
-    min-width: 16mm;
-    max-width: 16mm;
+    min-width: 15mm;
+    max-width: 15mm;
     min-height: 4.5mm;
     max-height: 4.5mm;
     font-size: 2.5mm;
@@ -607,8 +616,8 @@ h1, #nitE{
 }
 
 #nCoutas, #vrCuota{
-    min-width: 22mm;
-    max-width: 22mm;
+    min-width: 20mm;
+    max-width: 20mm;
     min-height: 6mm;
     max-height: 6mm;
 }
@@ -654,15 +663,15 @@ h1, #nitE{
 }
 
 #tomaCont{
-    min-width: 54mm;
-    max-width: 54mm;
+    min-width: 50mm;
+    max-width: 50mm;
     min-height: 6mm;
     max-height: 6mm;
 }
 
 #telCliente{
-    min-width: 65mm;
-    max-width: 65mm;
+    min-width: 56mm;
+    max-width: 56mm;
     min-height: 6mm;
     max-height: 6mm; 
 }
@@ -680,6 +689,8 @@ h1, #nitE{
     min-height: 6mm;
     max-height: 6mm;
 }
+
+
 
 .de105{
     display: inline-block;
@@ -701,6 +712,7 @@ h1, #nitE{
     max-width: 107mm;
     min-height: 120mm;
     max-height: 120mm;
+    /*text-align: center;*/
 }
 
 #tituloL{
@@ -846,33 +858,7 @@ li{
     margin: 0;
     width: 14mm;
     height: 7mm;  
-    padding-left: 1.5mm;
-}
-
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-.modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 50%;
-    text-align: center;
-
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    padding-left: 1.5mm;  
 }
 
 .derP{
@@ -941,6 +927,7 @@ li{
 }
 
 .comPago{
+    /*page-break-before:always;*/
     padding-top: 150px;
     min-height: 250mm;
     max-height: 250mm;
@@ -975,36 +962,853 @@ li{
 }
 
 @media print {
+    /* Ajustar el tamaño de la página a oficio */
     @page {
-        size: legal;
-        margin: 0;
+        size: legal; /* Tamaño de página oficio */
     }
 }
 
-@media (max-width: 768px){
 
-    #nino{
-        min-width: 105mm;
-        max-width: 105mm;
+@media screen and (width<900px){
+    input{
+        border: none;
+        height: 5mm;
+        margin: 0.2mm 0 0 0;
+        padding: 0;
+        background-color: transparent;
+        resize: none;
+        overflow: hidden;
     }
-
+    
+    textarea{
+        resize: none;
+        overflow: hidden;
+    }
+    
+    label{
+        font-size: 3mm;
+    }
+    
+    .cabecera{
+        display: block;
+        position: relative;
+        top: 0;
+        left: 0;
+        min-width: 195mm;
+        max-width: 195mm;
+        min-height: 26mm;
+        max-height: 26mm;  
+    }
+    
+    img{
+        position: relative;
+        min-width: 32mm;
+        max-width: 32mm;
+        max-height: 20mm;
+        display: inline-block;
+        bottom: 0;
+    }
+    
+    .datoEmp{
+        position: relative;
+        min-width: 88mm;
+        max-width: 88mm;
+        min-height: 20mm;
+        max-height: 20mm;
+        bottom: 0;
+        text-align: center;
+        display: inline-block;
+    }
+    
+    h1, #nitE{
+        font-weight: bold;
+    }
+    
+    .dE{
+        font-size: 3.5mm;
+    }
+    
+    .infoPedido{
+        position: relative;
+        top: 2mm;
+        bottom: 0;
+        border-radius: 3mm;
+        min-width: 70mm;
+        max-width: 70mm;
+        max-height: 20mm;
+        min-height: 20mm;
+        display: inline-block;    
+        border: 2px solid;
+        margin: auto;
+    }
+    
+    .contenedor{
+        position: absolute;
+        top: 2mm;
+        bottom: 0;
+        left: 2mm;
+        margin: auto;
+    }
+    
+    #pedido{
+        color: red;
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: 1mm;
+        font-size: 100%;
+    }
+    
+    #fecha{
+        margin-bottom: 1mm;
+    }
+    
+    #pedido, #fecha, #cuenta{
+        height: 4mm;
+        width: 50mm;
+        border-bottom: 1px black solid;
+        background-color: transparent;
+    }
+    
+    .datosClientes{
+        display: block;
+        position: relative;
+        min-width: 195mm;
+        max-width: 195mm;
+        min-height: 36mm;
+        max-height: 36mm;
+        border: 2px black solid;
+        border-radius: 3mm;
+        background-color: #CFE6F9;
+    }
+    
+    .nomApe, .dirTelBarr, .emprTelDir{
+        display: block;
+        position: relative;
+        min-width: 195mm;
+        max-width: 195mm;
+        min-height: 7mm;
+        max-height: 7mm;
+        border-bottom: 1px solid;
+    }
+    
+    .divMitadI{
+        display: inline-block;
+        min-width: 96.44mm;
+        max-width: 96.44mm;
+        min-height: 7mm;
+        max-height: 7mm;
+        border-right: 1px black solid;
+        margin: 0;
+    }
+    
+    #nombre, #apellido{
+        min-width: 82mm;
+        max-width: 82mm;
+        font-weight: bold;
+        font-size: 80%;
+    }
+    
+    .divMitadD{
+        display: inline-block;
+        min-width: 96mm;
+        max-width: 96mm;
+        min-height: 7mm;
+        max-height: 7mm;
+        margin: 0;
+    }
+    
+    #direccion{
+        min-width: 74mm;
+        max-width: 74mm;
+        font-weight: bold;
+        font-size: 2.2mm;
+    }
+    
+    .div26{
+        display: inline-block;
+        min-width: 40mm;
+        max-width: 40mm;
+        min-height: 7mm;
+        max-height: 7mm;
+        margin: 0;
+        padding: 0;
+        border-right: 1px black solid;
+    }
+    
+    #celular, #telefonoEmp{
+        min-width: 24mm;
+        max-width: 24mm;
+        font-weight: bold;
+        font-size: 65%;
+    }
+    
+    .div56, .div56-2{
+        display: inline-block;
+        min-width: 54.5mm;
+        max-width: 54.5mm;
+        min-height: 7mm;
+        max-height: 7mm;
+        margin: 0;
+        padding: 0;
+    }
+    
+    #barrio{
+        min-width: 43mm;
+        max-width: 43mm;
+        font-weight: bold;
+        font-size: 65%;
+        font-size: 2.3mm;
+    }
+    
+    #empresa{
+        min-width: 81mm;
+        font-weight: bold;
+        max-width: 81mm;
+    }
+    
+    #dirEmpr{
+        min-width: 40mm;
+        font-weight: bold;
+        max-width: 40mm;
+    }
+    
+    .div56-2{
+        border-right: 1px black solid;
+    }
+    #cargo{
+        min-width: 43mm;
+        max-width: 43mm;
+        font-weight: bold;
+    }
+    
+    .div26-2{
+        display: inline-block;
+        min-width: 40mm;
+        max-width: 40mm;
+        min-height: 7mm;
+        max-height: 7mm;
+        margin: 0;
+    }
+    
+    #antiguedad{
+        min-width: 22mm;
+        max-width: 22mm;
+        font-weight: bold;
+    }
+    
+    #sueldo{
+        min-width: 27mm;
+        max-width: 27mm;
+        font-weight: bold;
+    }
+    
+    #propia, #alquilada, #cCasa, #cEmpresa{
+        min-width: 3mm;
+        max-width: 3mm;
+        min-height: 3mm;
+        max-height: 3mm;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .emailEntFecha{
+        display: block;
+        position: relative;
+        min-width: 195mm;
+        max-width: 195mm;
+        min-height: 7mm;
+        max-height: 7mm;
+        /*border-top: 1px solid;*/
+    }
+    
+    #email{
+        min-width: 80mm;
+        max-width: 80mm;
+        font-size: 80%;
+        font-weight: bold;
+    }
+    
+    #fCobro{
+        min-width: 32mm;
+        max-width: 32mm;
+    }
+    
+    .ninoCiudad{
+        display: block;
+        position: relative;
+        margin-top: 1mm;
+        min-width: 195mm;
+        max-width: 195mm;
+        min-height: 7mm;
+        max-height: 7mm;
+        border: 2px black solid;
+        border-radius: 3mm;
+        background-color: #CFE6F9;
+    }
+    
+    .nomNino{
+        display: inline-block;
+        position: relative;
+        min-height: 7mm;
+        max-height: 7mm;
+        min-width: 138mm;
+        max-width: 138mm;
+        border-right: 1px black solid ;
+    }
+    
+    #nino{
+        min-width: 109mm;
+        max-width: 109mm;
+        font-weight: bold;
+        font-size: 65%;
+    }
+    
+    .ciudad{
+        display: inline-block;
+        position: relative;
+        min-height: 6.5mm;
+        max-height: 6.5mm;
+        min-width: 55mm;
+        max-width: 55mm;
+        background-color: white;
+        border-top-right-radius: 3mm;
+        border-bottom-right-radius: 3mm;
+    }
+    
+    #ciudad{
+        min-width: 40mm;
+        max-width: 40mm;
+        font-size: 2.5mm;
+    }
+    
+    .conyCodeudor{
+        display: block;
+        position: relative;
+        margin-top: 1mm;
+        min-width: 195mm;
+        max-width: 195mm;
+        min-height: 22mm;
+        max-height: 22mm;
+        border: 2px black solid;
+        border-radius: 3mm;
+        background-color: #CFE6F9;
+    }
+    
+    .nomApe{
+        border-top: none;
+        border-left: none;
+        border-right: none;
+    }
+    
     #nombCo, #apellCo{
         min-width: 45mm;
         max-width: 45mm;
     }
-
-    #ptco1, #ptco2, #ptco3, #ptco4{
-        min-width: 15mm;
-        max-width: 15mm;
+    
+    #empCo{
+        min-width: 81mm;
+        max-width: 81mm;
     }
-
+    
+    #telCo{
+        min-width: 24mm;
+        max-width: 24mm;
+        font-size: 65%;
+    }
+    
+    #direCo{
+        min-width: 40mm;
+        max-width: 40mm;
+    }
+    
+    .carAntSuel, .carAntSuel2{
+        display: block;
+        position: relative;
+        min-width: 195mm;
+        max-width: 195mm;
+        min-height: 7mm;
+        max-height: 7mm;
+        /*border-top: 1px solid;*/
+    }
+    
+    .carAntSuel{
+        border-bottom: 1px solid;
+    }
+    
+    #cargoCo{
+        min-width: 43mm;
+        max-width: 43mm;
+    }
+    
+    #antiCo{
+        min-width: 22mm;
+        max-width: 22mm;
+    }
+    
+    #suelCo{
+        min-width: 27mm;
+        max-width: 27mm;
+    }
+    
+    #autosi, #autono{
+        min-width: 3mm;
+        max-width: 3mm;
+        min-height: 3mm;
+        max-height: 3mm;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .reObReCo{
+        display: block;
+        position: relative;
+        margin-top: 1mm;
+        min-width: 195mm;
+        max-width: 195mm;
+        min-height: 169mm;
+        max-height: 169mm;
+        border-radius: 3mm;
+    }
+    
+    .iz81{
+        display: inline-block;
+        position: relative;
+        margin-right: 1mm;
+        min-width: 83mm;
+        max-width: 83mm;
+        min-height: 167mm;
+        max-height: 167mm;
+        border-radius: 3mm;
+    }
+    
+    .referido{
+        display: block;
+        position: relative;
+        min-width: 83mm;
+        max-width: 83mm;
+        min-height: 50mm;
+        max-height: 50mm;
+        border: 1px black solid;
+        border-radius: 3mm;
+        background-color: #CFE6F9;
+    }
+    
+    .datoReferido{
+        position: relative;
+        border-bottom: 1px black solid;
+        min-width: 82mm;
+        max-width: 82mm;
+        min-height: 6mm;
+        max-height: 6mm;
+    }
+    
+    .datoReferidoF{
+        text-align: center;
+        position: relative;
+        min-width: 82mm;
+        max-width: 82mm;
+        min-height: 6mm;
+        max-height: 6mm;
+    }
+    
+    #nombR1, #nombR2, #nombR3, #nombR4{
+        min-width: 32mm;
+        max-width: 32mm;
+        min-height: 4.5mm;
+        max-height: 4.5mm;
+        font-size: 2.5mm;
+    }
+    
+    #ptco1, #ptco2, #ptco3, #ptco4{
+        min-width: 13mm;
+        max-width: 13mm;
+        min-height: 4.5mm;
+        max-height: 4.5mm;
+        font-size: 2.5mm;
+    }
+    
+    #telOR1, #telRR1, #telOR2, #telRR2, #telOR3, #telRR3, #telOR4, #telRR4{
+        min-width: 26mm;
+        max-width: 26mm;
+        min-height: 4.5mm;
+        max-height: 4.5mm;
+        font-size: 2.5mm;
+    }
+    
+    .obras{
+        display: block;
+        position: relative;
+        min-width: 83mm;
+        max-width: 83mm;
+        min-height: 53mm;
+        max-height: 53mm;
+        border: 1px black solid;
+        border-radius: 3mm;
+        margin-top: 1mm;
+        background-color: #CFE6F9;
+    }
+    
+    .coleccionOb{
+        display: inline-block;
+        position: relative;
+        min-width: 57mm;
+        max-width: 57mm;
+        min-height: 4mm;
+        max-height: 4mm;
+        border-bottom: 1px black solid;
+        border-right: 1px black solid;
+        text-align: center;
+    }
+    
+    .valorOb{
+        display: inline-block;
+        position: relative;
+        min-width: 24mm;
+        max-width: 24mm;
+        min-height: 4mm;
+        max-height: 4mm;
+        border-bottom: 1px black solid;
+        text-align: center;
+    }
+    
+    #detColec{
+        display: inline-block;
+        position: relative;
+        min-width: 56mm;
+        max-width: 56mm;
+        min-height: 30mm;
+        max-height: 30mm;
+        margin: 0;
+        font-size: 80%;
+    }
+    
+    #detValor{
+        display: inline-block;
+        position: relative;
+        min-width: 22mm;
+        max-width: 22mm;
+        min-height: 30mm;
+        max-height: 30mm;
+        margin: 0;
+    }
+    
+    .importetol{
+        display: block;
+        position: relative;
+        min-width: 82mm;
+        max-width: 82mm;
+        min-height: 7mm;
+        max-height: 7mm;
+        border: 1px black solid;
+    }
+    
+    .importe{
+        display: inline-block;
+        position: relative;
+        min-width: 56mm;
+        max-width: 56mm;
+        min-height: 5mm;
+        max-height: 5mm;
+        text-align: right;
+    }
+    
+    .totalVal{
+        display: inline-block;
+        position: relative;
+        min-width: 22mm;
+        max-width: 22mm;
+        min-height: 30mm;
+        max-height: 30mm;
+        margin: 1mm 0 0 0;
+    }
+    
+    #totalVal{
+        min-width: 24mm;
+        max-width: 24mm;
+        min-height: 5mm;
+        max-height: 5mm;
+    }
+    
+    .coutasOb{
+        display: block;
+        position: relative;
+        min-width: 82mm;
+        max-width: 82mm;
+        min-height: 8mm;
+        max-height: 8mm;
+        margin-top: 1mm;
+    }
+    
     #nCoutas, #vrCuota{
         min-width: 20mm;
         max-width: 20mm;
+        min-height: 6mm;
+        max-height: 6mm;
+    }
+    
+    .observaciones{
+        display: block;
+        position: relative;
+        min-width: 83mm;
+        max-width: 83mm;
+        min-height: 23mm;
+        max-height: 23mm;
+        border: 1px black solid;
+        border-radius: 3mm;
+        margin-top: 1mm;
+        font-size: 90%;
+    }
+    
+    #observ{
+        display: block;
+        position: relative;
+        min-width: 81mm;
+        max-width: 81mm;
+        min-height: 21mm;
+        max-height: 21mm;
+        margin: 0;
+        background-color: transparent;
+        border-radius: 3mm;
+        border: transparent;
+        font-size: 90%;
+    }
+    
+    .relacionista, .especialista, .director{
+        display: block;
+        position: relative;
+        min-width: 83mm;
+        max-width: 83mm;
+        min-height: 8mm;
+        max-height: 8mm;
+        border: 1px black solid;
+        border-radius: 3mm;
+        margin-top: 1mm;
+        background-color: #CFE6F9;
+    }
+    
+    #tomaCont{
+        min-width: 56mm;
+        max-width: 56mm;
+        min-height: 6mm;
+        max-height: 6mm;
+    }
+    
+    #especialista{
+        min-width: 63mm;
+        max-width: 63mm;
+        min-height: 6mm;
+        max-height: 6mm;
+    }
+    
+    #director{
+        min-width: 67mm;
+        max-width: 67mm;
+        min-height: 6mm;
+        max-height: 6mm;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    .de105{
+        display: inline-block;
+        position: absolute;
+        margin: 0;
+        min-width: 109mm;
+        max-width: 109mm;
+        min-height: 166mm;
+        max-height: 166mm;
+        border: 2px black solid;
+        border-radius: 3mm;
+        background-color: #CFE6F9;
+    }
+    
+    .legal{
+        display: block;
+        margin: 1mm 1mm 0 1mm;
+        min-width: 107mm;
+        max-width: 107mm;
+        min-height: 120mm;
+        max-height: 120mm;
+    }
+    
+    #tituloL{
+        font-size: 3mm;
+        font-weight: bold;
+        text-align: center;
+    }
+    
+    li{
+        margin-left: 2mm;
+        font-size: 2mm;
+        list-style-type: decimal;
+    }
+    
+    #cartera{
+        font-size: 2.4mm;
+        margin: 1mm 1mm 0 2mm;
+    }
+    
+    .celHuella{
+        display: block;
+        position: relative;
+        margin: 1mm 1mm 0 1mm;
+        min-width: 107mm;
+        max-width: 107mm;
+        min-height: 20mm;
+        max-height: 20mm;
+    }
+    
+    .datoCedula{
+        position: relative;
+        display: inline-block;
+        min-width: 80mm;
+        max-width: 80mm;
+        padding-top: 12mm;
+    }
+    
+    #cedula1, #cedula2{
+        background-color: white;
+        letter-spacing: 1mm;
+        border-top: 1px black solid;
+    }
+    
+    #cc1, #ce1, #nit1, #cc2, #ce2, #nit2{
+        min-width: 3mm;
+        max-width: 3mm;
+        min-height: 3mm;
+        max-height: 3mm;
+        margin: 0;
+    }
+    
+    .huella{
+        position: absolute;
+        display: inline-block;
+        min-width: 20mm;
+        max-width: 20mm;
+        min-height: 18mm;
+        max-height: 18mm;
+        border: 1px black solid;
+        margin: 0 0 0 5mm;
+        background-color: white;
+    }
+    
+    #indiceD{
+        position: absolute;
+        font-size: 2mm;
+    }
+    
+    
+    .pagare{
+        display: block;
+        position: relative;
+        margin-top: 1mm;
+        min-width: 195mm;
+        max-width: 195mm;
+        min-height: 61mm;
+        max-height: 61mm;
+        border: 2px black solid;
+        border-radius: 3mm;
+        background-color: #CFE6F9;
+    }
+    
+    .izqP{
+        position: relative;
+        display: inline-block;
+        margin-top: 1mm;
+        min-width: 186mm;
+        max-width: 186mm;
+        min-height: 60mm;
+        max-height: 60mm;
+    }
+    
+    .terminosPagare{
+        display: block;
+        position: relative;
+        margin: 0 1mm 0 1mm;
+        min-width: 185mm;
+        max-width: 185mm;
+        min-height: 35mm;
+        max-height: 35mm;
+    }
+    
+    #textoPagare1, #textoPagare2{
+        font-size: 2.5mm;
+    }
+    
+    .firmaCedHuellas{
+        display: block;
+        position: relative;
+        margin: 1mm 1mm 0 1mm;
+        min-width: 185mm;
+        max-width: 185mm;
+        min-height: 23mm;
+        max-height: 23mm;
+    }
+    
+    .huella2{
+        position: static;
+        display: inline-flex;
+        min-width: 20mm;
+        max-width: 20mm;
+        min-height: 18mm;
+        max-height: 18mm;
+        border: 1px black solid;
+        margin: 0 0 0 5mm;
+        background-color: white;
+    }
+    
+    #cedula3, #cedula4{
+        position: relative;
+        display: inline-flex;
+        border-top: 1px black solid;
+        letter-spacing: 1mm;
+    }
+    
+    #guardar{
+        position: relative;
+        display: inline-flex;
+        margin: 0 2mm 0 2mm;
     }
 
-    #tomaCont{
-        min-width: 50mm;
-        max-width: 50mm;
+    #guardar:hover{
+        cursor: pointer;
     }
+
+    #guardar:active {
+        visibility: hidden;
+        transition-duration: 3s;
+        visibility: visible;
+    }
+    
+    .derP{
+        position: absolute;
+        display: inline-block;
+        min-width: 5mm;
+        max-width: 5mm;
+        min-height: 60mm;
+        max-height: 60mm;
+    }
+    
+    .tPagare{
+        display: block;
+        position: relative;
+        margin: 1mm 1mm 0 1mm;
+        min-width: 185mm;
+        max-width: 185mm;
+        min-height: 35mm;
+        max-height: 35mm;
+    }
+    
+    #textoPagare3{
+        transform: rotate(270deg);
+        margin-top: 20mm;
+        font-weight: bold;
+    }
+    
 }
