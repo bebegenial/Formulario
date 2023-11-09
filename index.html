@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="src/reset.css">
     <link rel="stylesheet" href="src/style.css">
     <link rel="stylesheet" type="text/css" href="src/style.css" media="screen" />
+    <script src="https://apis.google.com/js/api.js" id="gapi" defer></script>
+    <script src="https://accounts.google.com/gsi/client" id="gis"></script>
     <title>Formulario</title>
 </head>
 
@@ -458,6 +460,15 @@
                         <p id="indiceD">Indice Derecho</p>
                     </div>
                     <input type="button" id="guardar" value="Guardar">
+                    <div id="myModal" class="modal">
+                        <div class="modal-content">
+                            <h2>Elige una opción</h2>
+                            <button id="opcion1">Registrarse</button>
+                            <button id="opcion2">Nuevo Pedido</button>
+                            <button id="opcion3">Buscar Pedido</button>
+                            <button id="opcion4">Actualizar Pedido</button>
+                        </div>
+                    </div>
                     <!--<button id="guardar">Guardar</button>-->
                     <label for="cedula4">Cedula</label>
                     <input type="number" id="cedula4">
@@ -573,7 +584,9 @@
     </div>
 
 
-    <script src="src/script.js"></script>
+    <script src="src/script.js"></script>    
+    <script async defer src="src/auth.js"></script>
+    <script async defer src="src/sheets.js"></script>
 </body>
 
 </html><!--Hector Rosas-->
