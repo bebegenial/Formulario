@@ -15,12 +15,12 @@ html, body{
     forced-color-adjust: exact !important;
 }
 
-.formulario{
+form{
     position: relative;
     min-width: 196mm;
     max-width: 196mm;
-    min-height: 350mm;
-    max-height: 350mm;
+    min-height: 328.8mm;
+    max-height: 328.8mm;
     top: 0;
     left: 0;
     right: 0;
@@ -68,7 +68,7 @@ img{
 }
 
 p {
-    font-size: 16px;
+    font-size: 13px;
 }
 
 .datoEmp{
@@ -919,8 +919,8 @@ li{
     margin: 2px red;
     min-width: 196mm;
     max-width: 196mm;
-    min-height: 400mm;
-    max-height: 400mm;
+    min-height: 328.8mm;
+    max-height: 328.8mm;
     top: 0;
     left: 0;
     right: 0;
