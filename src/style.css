@@ -2,8 +2,6 @@ html, body{
     position: absolute;
     min-width: 216mm;
     max-width: 216mm;
-    /*min-height: 330mm;
-    max-height: 330mm;*/
     min-height: 1400mm;
     max-height: 1400mm;
     margin: 1mm 0 0 0;
@@ -31,11 +29,9 @@ html, body{
 
 input{
     border: none;
-    /*border-bottom: 1px black solid;*/
     height: 5mm;
     margin: 0.2mm 0 0 0;
     padding: 0;
-    /*background-color: #CFE6F9;*/
     background-color: transparent;
     resize: none;
     overflow: hidden;
@@ -68,9 +64,7 @@ img{
     max-width: 32mm;
     max-height: 20mm;
     display: inline-block;
-    /*top: 0;*/
     bottom: 0;
-    /*margin: auto;*/
 }
 
 p {
@@ -83,9 +77,7 @@ p {
     max-width: 88mm;
     min-height: 20mm;
     max-height: 20mm;
-    /*top: 0;*/
     bottom: 0;
-    /*margin: auto;*/
     text-align: center;
     display: inline-block;
 }
@@ -296,7 +288,6 @@ h1, #nitE{
     max-width: 195mm;
     min-height: 7mm;
     max-height: 7mm;
-    /*border-top: 1px solid;*/
 }
 
 #email{
@@ -407,7 +398,6 @@ h1, #nitE{
     max-width: 195mm;
     min-height: 7mm;
     max-height: 7mm;
-    /*border-top: 1px solid;*/
 }
 
 .carAntSuel{
@@ -439,7 +429,6 @@ h1, #nitE{
 }
 
 .reObReCo{
-    /*display: flex;*/
     display: block;
     position: relative;
     margin-top: 1mm;
@@ -458,7 +447,6 @@ h1, #nitE{
     max-width: 83mm;
     min-height: 167mm;
     max-height: 167mm;
-    /*border: 2px red solid;*/
     border-radius: 3mm;
 }
 
@@ -715,7 +703,6 @@ h1, #nitE{
     max-width: 107mm;
     min-height: 120mm;
     max-height: 120mm;
-    /*text-align: center;*/
 }
 
 #tituloL{
@@ -783,7 +770,6 @@ li{
     position: absolute;
     font-size: 2mm;
 }
-
 
 .pagare{
     display: block;
@@ -875,7 +861,6 @@ li{
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-/* Estilo del contenido del modal */
 .modal-content {
     background-color: #fefefe;
     margin: 15% auto;
@@ -957,7 +942,6 @@ li{
 }
 
 .comPago{
-    /*page-break-before:always;*/
     padding-top: 150px;
     min-height: 250mm;
     max-height: 250mm;
@@ -992,9 +976,8 @@ li{
 }
 
 @media print {
-    /* Ajustar el tamaño de la página a oficio */
     @page {
-        size: legal; /* Tamaño de página oficio */
+        size: legal;
         margin: 0;
     }
 }

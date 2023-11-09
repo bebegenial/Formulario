@@ -92,16 +92,6 @@ var $imgcedula1 = document.querySelector("#imgfile");
 var $imgcedula2 = document.querySelector("#imgfile2");
 var $imgpago = document.querySelector("#pagofile");
 
-function ejecFunc() {
-    /*if(validarCampos()===true){
-        resaltarCampos();
-        guardarPdf();
-    }else{
-        alert("Debes llenar todos los campos requeridos")
-        resaltarCampos();
-    }*/
-}
-//$botonGuardar.onclick = ejecFunc;
 
 async function guardarPdf() {
 
@@ -244,20 +234,18 @@ opcion1Button.addEventListener('click', function () {
 opcion2Button.addEventListener('click', function (event) {
     
     if (!pedidos) {
-        //validar si inicio sesion
-        event.preventDefault(); // Evitar la recarga de la página
+        event.preventDefault();
         alert("¡Debes Registrarte!")
         handleAuthClick();        
     } else {
-        // Realizar acciones relacionadas con la Opción Nuevo Pedido
         modal.style.display = 'none';
         if (validarCampos() === true) {
-            event.preventDefault(); // Evitar la recarga de la página
+            event.preventDefault();
             resaltarCampos();
             nuevoPedido();
             guardarPdf();     
         } else {
-            event.preventDefault(); // Evitar la recarga de la página
+            event.preventDefault();
             alert("Debes llenar todos los campos requeridos")
             resaltarCampos();
         }
@@ -268,31 +256,29 @@ opcion2Button.addEventListener('click', function (event) {
 //Buscar Pedido
 opcion3Button.addEventListener('click', function (event) {
     if (!pedidos) {
-        event.preventDefault(); // Evitar la recarga de la página
-        //validar si inicio sesion
+        event.preventDefault();
         alert("¡Debes Registrarte!")
         handleAuthClick();
     } else {
-        event.preventDefault(); // Evitar la recarga de la página
+        event.preventDefault();
         buscarPedido();
         modal.style.display = 'none';
-        // Realizar acciones relacionadas con la Opción Buscar Pedido
     }
 });
 
 //Actualizar Pedido
 opcion4Button.addEventListener('click', function (event) {
     if (!pedidos) {
-        event.preventDefault(); // Evitar la recarga de la página
+        event.preventDefault();
         //validar si inicio sesion
         alert("¡Debes Registrarte!")
         handleAuthClick();
     } else if(validarCampos() === true) {
-        event.preventDefault(); // Evitar la recarga de la página
+        event.preventDefault();
         modal.style.display = 'none';
         editPedidos();        
     } else {
-        event.preventDefault(); // Evitar la recarga de la página
+        event.preventDefault();
         alert("Debes llenar todos los campos requeridos")
         resaltarCampos();
     }
@@ -310,17 +296,15 @@ window.onload = function () {
     modal.style.display = 'block'
 };
 
-// Agregar un controlador de eventos para el evento keydown en el documento
+
 document.addEventListener('keydown', function (event) {
-    // Verificar si se presiona la tecla Control (o Command en macOS) y la letra "P" (código de tecla 80)
     if ((event.ctrlKey || event.metaKey) && event.key === 'p') {
-        // Anular la acción predeterminada (impresión)
         event.preventDefault();
         console.log('La combinación de teclas Control + P está deshabilitada.');
     }
 });
 
-//bloqueando la ejecucion del boton derecho
+
 window.addEventListener('contextmenu', function (e) {
     e.preventDefault();
     modal.style.display = 'block';
