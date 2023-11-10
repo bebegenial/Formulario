@@ -106,6 +106,7 @@ async function editPedidos() {
     const filaEditar = pedidos.findIndex(pedidos => parseInt(pedidos.pedido) === parseInt($pedido.value)) + 2;
 
     if (pedidos.findIndex(pedidos => parseInt(pedidos.pedido) === parseInt($pedido.value)) >= 0) {
+        quitarEspacios();
         let copiaAnterior = Object.values(pedidos[filaEditar - 2]);
         const update = [
             $pedido.value,
@@ -275,6 +276,7 @@ async function nuevoPedido() {
     if (!cargado || cargado !== 1 ) {
 
         if (pedidos.length >= 0 || !cargado) {
+            quitarEspacios();
             const filaNueva = pedidos.length + 2;
             let pedidoNuevo = (parseInt(pedidos[pedidos.length - 1].pedido) + 1);
             $pedido.value = pedidoNuevo;
@@ -355,5 +357,58 @@ async function nuevoPedido() {
         }
     } else {
         editPedidos();
+    }
+}
+
+function quitarEspacios(){
+    /*$telefono.value = $telefono.value.replace(/\s/g, '');
+    $organizador.value = $organizador.value.replace(/\s/g, '');
+    $ctele.value = $ctele.value.replace(/\s/g, '');
+    $telefono2.value = $telefono2.value.replace(/\s/g, '');
+    $rTele1.value = $rTele1.value.replace(/\s/g, '');
+    $rTeleres1.value = $rTeleres1.value.replace(/\s/g, '');
+    $rTele2.value = $rTele2.value.replace(/\s/g, '');
+    $rTeleres2.value = $rTeleres2.value.replace(/\s/g, '');
+    $rTele3.value = $rTele3.value.replace(/\s/g, '');
+    $rTeleres3.value = $rTeleres3.value.replace(/\s/g, '');
+    $rTele4.value = $rTele4.value.replace(/\s/g, '');
+    $rTeleres4.value = $rTeleres4.value.replace(/\s/g, '');*/
+
+    if ($telefono.value.startsWith('+')) {
+        // Agregar una comilla simple al principio del número
+        $telefono.value = "'" + $telefono.value;
+    }
+    if ($organizador.value.startsWith('+')) {
+        $organizador.value = "'" + $organizador.value;
+    }
+    if ($ctele.value.startsWith('+')) {
+        $ctele.value = "'" + $ctele.value;
+    }
+    if ($telefono2.value.startsWith('+')) {
+        $telefono2.value = "'" + $telefono2.value;
+    }
+    if ($rTele1.value.startsWith('+')) {
+        $rTele1.value = "'" + $rTele1.value;
+    }
+    if ($rTeleres1.value.startsWith('+')) {
+        $rTeleres1.value = "'" + $rTeleres1.value;
+    }
+    if ($rTele2.value.startsWith('+')) {
+        $rTele2.value = "'" + $rTele2.value;
+    }
+    if ($rTeleres2.value.startsWith('+')) {
+        $rTeleres2.value = "'" + $rTeleres2.value;
+    }
+    if ($rTele3.value.startsWith('+')) {
+        $rTele3.value = "'" + $rTele3.value;
+    }
+    if ($rTeleres3.value.startsWith('+')) {
+        $rTeleres3.value = "'" + $rTeleres3.value;
+    }
+    if ($rTele4.value.startsWith('+')) {
+        $rTele4.value = "'" + $rTele4.value;
+    }
+    if ($rTeleres4.value.startsWith('+')) {
+        $rTeleres4.value = "'" + $rTeleres4.value;
     }
 }
