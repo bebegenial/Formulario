@@ -590,6 +590,7 @@ h1, #nitE{
 }
 
 #totalVal{
+    text-align: center;
     min-width: 24mm;
     max-width: 24mm;
     min-height: 5mm;
@@ -607,6 +608,7 @@ h1, #nitE{
 }
 
 #nCoutas, #vrCuota{
+    text-align: center;
     min-width: 22mm;
     max-width: 22mm;
     min-height: 6mm;
@@ -654,7 +656,6 @@ h1, #nitE{
 }
 
 #tomaCont{
-    text-align: center;
     min-width: 54mm;
     max-width: 54mm;
     min-height: 6mm;
@@ -662,7 +663,6 @@ h1, #nitE{
 }
 
 #telCliente{
-    text-align: center;
     min-width: 65mm;
     max-width: 65mm;
     min-height: 6mm;
@@ -670,7 +670,6 @@ h1, #nitE{
 }
 
 #especialista{
-    text-align: center;
     min-width: 63mm;
     max-width: 63mm;
     min-height: 6mm;
@@ -678,7 +677,6 @@ h1, #nitE{
 }
 
 #director{
-    text-align: center;
     min-width: 67mm;
     max-width: 67mm;
     min-height: 6mm;
