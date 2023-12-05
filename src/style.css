@@ -407,16 +407,19 @@ h1, #nitE{
 #cargoCo{
     min-width: 43mm;
     max-width: 43mm;
+    font-size: 90%;
 }
 
 #antiCo{
     min-width: 20mm;
     max-width: 20mm;
+    font-size: 90%;
 }
 
 #suelCo{
     min-width: 28mm;
     max-width: 28mm;
+    font-size: 90%;
 }
 
 #autosi, #autono{
