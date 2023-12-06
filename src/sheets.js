@@ -5,7 +5,9 @@ let cargado;
 async function getPedidos() {
     let response;
     let response2;
+    let sebastian;
     try {
+        //conexion con los sheets
         response = await gapi.client.sheets.spreadsheets.values.get({
             spreadsheetId: '1zjjoOVeIl11Ytg5grWpP_Z4BxlEbjMJYwjNpLebGbSg',
             range: 'pedidos!A:BJ',
@@ -18,8 +20,21 @@ async function getPedidos() {
         console.error(err)
         return;
     }
+
+    try{
+    sebastian = await gapi.client.sheets.spreadsheets.values.get({
+        spreadsheetId: '1zjjoOVeIl11Ytg5grWpP_Z4BxlEbjMJYwjNpLebGbSg',
+        range: 'pedidosSebastian!A:BJ',
+    });
+    } catch (err) {
+        console.error("Error al intentar cargar el Formulario de Sebastian: " +err)
+        return;
+    }
+
+
     const range = response.result;
     if (!range || !range.values || range.values.length == 0) {
+        //Enviando un mensaje por consola en caso de que no se encuentren datos
         console.warn("No se encontraron valores")
         return;
     }
@@ -28,10 +43,12 @@ async function getPedidos() {
         console.warn("No se encontraron valores en la copia")
         return;
     }
+    //obteniendo la cantidad de filas en la hoja de copia
     filaPedido = copia.values.length + 1;
 
     pedidos = [];
     range.values.forEach((fila) => {
+        //guardamos los datos de los pedidos en el sheet en un objeto
         if (isNaN(parseInt(fila[0]))) return;
         const nuevoPedido = {
             pedido: fila[0],
@@ -99,6 +116,83 @@ async function getPedidos() {
         };
         pedidos.push(nuevoPedido);
     });
+
+    try{
+        pedidosSeb = [];
+        const rangeSeb = sebastian.result;
+        rangeSeb.values.forEach((fila2) => {
+            //guardamos los datos de los pedidos en el sheet en un objeto
+            if (isNaN(parseInt(fila2[0]))) return;
+            const nuevoPedidoSeb = {
+                pedido: fila2[0],
+                fecha: fila2[1],
+                cuenta: fila2[2],
+                nombre1: fila2[3],
+                apellido: fila2[4],
+                direccion: fila2[5],
+                telefono: fila2[6],
+                barrio: fila2[7],
+                empresa: fila2[8],
+                telefono2: fila2[9],
+                direccion2: fila2[10],
+                cargo: fila2[11],
+                antiguo: fila2[12],
+                sueldo: fila2[13],
+                email: fila2[14],
+                fCobro: fila2[15],
+                nNino: fila2[16],
+                ciudad: fila2[17],
+                cNomb: fila2[18],
+                cApell: fila2[19],
+                cEmpresa: fila2[20],
+                cTele: fila2[21],
+                cDir: fila2[22],
+                cCargo: fila2[23],
+                cAntig: fila2[24],
+                cSueldo: fila2[25],
+                rNomb1: fila2[26],
+                rp1: fila2[27],
+                rTele1: fila2[28],
+                rTeleres1: fila2[29],
+                rNomb2: fila2[30],
+                rp2: fila2[31],
+                rTele2: fila2[32],
+                rTeleres2: fila2[33],
+                rNomb3: fila2[34],
+                rp3: fila2[35],
+                rTele3: fila2[36],
+                rTeleres3: fila2[37],
+                rNomb4: fila2[38],
+                rp4: fila2[39],
+                rTele4: fila2[40],
+                rTeleres4: fila2[41],
+                oCuotas: fila2[42],
+                oValor: fila2[43],
+                cedula1: fila2[44],
+                cc1: fila2[45],
+                ce1: fila2[46],
+                relacionista: fila2[47],
+                colaborador: fila2[48],
+                director: fila2[49],
+                organizador: fila2[50],
+                cedula2: fila2[51],
+                cc2: fila2[52],
+                ce2: fila2[53],
+                cedula3: fila2[54],
+                cedula4: fila2[55],
+                detColec: fila2[56],
+                detValor: fila2[57],
+                totalVal: fila2[58],
+                nCoutas: fila2[59],
+                vrCuota: fila2[60],
+                observ: fila2[61]
+            };
+            pedidosSeb.push(nuevoPedidoSeb)
+        });        
+        } catch (err) {
+            console.error("Error al cargar los datos del formulario de Sebastian: " +err)
+            return;
+        }
 
 }
 
@@ -195,9 +289,11 @@ async function editPedidos() {
 }
 
 async function buscarPedido() {
+    //buscamos el pedido
     const Encontrado = pedidos.findIndex(pedidos => parseInt(pedidos.pedido) === parseInt($pedido.value));
 
     if (Encontrado >= 0) {
+        //si encontramos el pedido, llevamos los datos al formulario
         const pedidoEncontrado = pedidos[Encontrado];
 
         $pedido.value = parseInt(pedidoEncontrado.pedido);
@@ -266,8 +362,85 @@ async function buscarPedido() {
 
 
     } else {
-        console.log("La posición proporcionada está fuera de rango.");
+        //si no se encontro el numero de pedido, se le indica al usuario
+        console.log("No existe el pedido");
         alert("Numero de pedido no encontrado");
+    }
+
+    try{
+        const Encontrado = pedidosSeb.findIndex(pedidosSeb => parseInt(pedidosSeb.cedula1) === parseInt($cedula1.value));
+        if($pedido.value === "" && $cedula1.value !== "" && Encontrado >= 0){
+
+        //si encontramos el pedido, llevamos Encontrado datos al formulario
+        const pedidoEncontrado = pedidosSeb[Encontrado];
+
+        $pedido.value = parseInt(pedidoEncontrado.pedido);
+        $fecha.value = pedidoEncontrado.fecha;
+        $cuenta.value = pedidoEncontrado.cuenta;
+        $nombre1.value = pedidoEncontrado.nombre1;
+        $apellido.value = pedidoEncontrado.apellido;
+        $direccion.value = pedidoEncontrado.direccion;
+        $telefono.value = pedidoEncontrado.telefono;
+        $barrio.value = pedidoEncontrado.barrio;
+        $empresa.value = pedidoEncontrado.empresa;
+        $telefono2.value = pedidoEncontrado.telefono2;
+        $direccion2.value = pedidoEncontrado.direccion2;
+        $cargo.value = pedidoEncontrado.cargo;
+        $antiguo.value = pedidoEncontrado.antiguo;
+        $sueldo.value = pedidoEncontrado.sueldo;
+        $email.value = pedidoEncontrado.email;
+        $fCobro.value = pedidoEncontrado.fCobro;
+        $nNino.value = pedidoEncontrado.nNino;
+        $ciudad.value = pedidoEncontrado.ciudad;
+        $cNomb.value = pedidoEncontrado.cNomb;
+        $cApell.value = pedidoEncontrado.cApell;
+        $cEmpresa.value = pedidoEncontrado.cEmpresa;
+        $ctele.value = pedidoEncontrado.cTele;
+        $cDir.value = pedidoEncontrado.cDir;
+        $cCargo.value = pedidoEncontrado.cCargo;
+        $cAntig.value = pedidoEncontrado.cAntig;
+        $cSueldo.value = pedidoEncontrado.cSueldo;
+        $rNomb1.value = pedidoEncontrado.rNomb1;
+        $rp1.value = pedidoEncontrado.rp1;
+        $rTele1.value = pedidoEncontrado.rTele1;
+        $rTeleres1.value = pedidoEncontrado.rTeleres1;
+        $rNomb2.value = pedidoEncontrado.rNomb2;
+        $rp2.value = pedidoEncontrado.rp2;
+        $rTele2.value = pedidoEncontrado.rTele2;
+        $rTeleres2.value = pedidoEncontrado.rTeleres2;
+        $rNomb3.value = pedidoEncontrado.rNomb3;
+        $rp3.value = pedidoEncontrado.rp3;
+        $rTele3.value = pedidoEncontrado.rTele3;
+        $rTeleres3.value = pedidoEncontrado.rTeleres3;
+        $rNomb4.value = pedidoEncontrado.rNomb4;
+        $rp4.value = pedidoEncontrado.rp4;
+        $rTele4.value = pedidoEncontrado.rTele4;
+        $rTeleres4.value = pedidoEncontrado.rTeleres4;
+        $oCuotas.value = pedidoEncontrado.oCuotas;
+        $oValor.value = pedidoEncontrado.oValor;
+        $cedula1.value = pedidoEncontrado.cedula1;
+        $cc1.value = pedidoEncontrado.cc1;
+        $ce1.value = pedidoEncontrado.ce1;
+        $relacionista.value = pedidoEncontrado.relacionista;
+        $colaborador.value = pedidoEncontrado.colaborador;
+        $director.value = pedidoEncontrado.director;
+        $organizador.value = pedidoEncontrado.organizador;
+        $cedula2.value = pedidoEncontrado.cedula2;
+        $cc2.value = pedidoEncontrado.cc2;
+        $ce2.value = pedidoEncontrado.ce2;
+        $cedula3.value = pedidoEncontrado.cedula3;
+        $cedula4.value = pedidoEncontrado.cedula4;
+        $detColec.value = pedidoEncontrado.detColec;
+        $detValor.value = pedidoEncontrado.detValor;
+        $totalVal.value = pedidoEncontrado.totalVal;
+        $nCoutas.value = pedidoEncontrado.nCoutas;
+        $vrCuota.value = pedidoEncontrado.vrCuota;
+        $observ.value = pedidoEncontrado.observ;
+        alert("Pedido encontrado");
+
+        }
+    } catch (err){
+        console.log("Error al tratar de ubicar el pedido de sebastian: " + err)
     }
 }
 
