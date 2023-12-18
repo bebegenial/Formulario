@@ -231,7 +231,7 @@ opcion1Button.addEventListener('click', function () {
 });
 
 //Nuevo Pedido
-opcion2Button.addEventListener('click', function (event) {
+opcion2Button.addEventListener('click', async function (event) {
     
     if (!pedidos) {
         event.preventDefault();
@@ -242,7 +242,7 @@ opcion2Button.addEventListener('click', function (event) {
         if (validarCampos() === true) {
             event.preventDefault();
             resaltarCampos();
-            nuevoPedido();
+            await nuevoPedido();
             guardarPdf();     
         } else {
             event.preventDefault();
@@ -250,7 +250,6 @@ opcion2Button.addEventListener('click', function (event) {
             resaltarCampos();
         }
     }
-
 });
 
 //Buscar Pedido
