@@ -241,6 +241,7 @@ opcion2Button.addEventListener('click', async function (event) {
         modal.style.display = 'none';
         if (validarCampos() === true) {
             event.preventDefault();
+            await getPedidos();
             resaltarCampos();
             await nuevoPedido();
             guardarPdf();     

@@ -445,7 +445,7 @@ async function buscarPedido() {
 }
 
 async function nuevoPedido() {
-    getPedidos();
+    
     if (!cargado || cargado !== 1 ) {
 
         if (pedidos.length >= 0 || !cargado) {
