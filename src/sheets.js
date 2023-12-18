@@ -199,7 +199,7 @@ async function getPedidos() {
 async function editPedidos() {
     const filaEditar = pedidos.findIndex(pedidos => parseInt(pedidos.pedido) === parseInt($pedido.value)) + 2;
 
-    if (pedidos.findIndex(pedidos => parseInt(pedidos.pedido) === parseInt($pedido.value)) >= 0) {
+    if (pedidos.findIndex(pedidos => parseInt(pedidos.pedido) === parseInt($pedido.value)) >= 0 && $pedido.value !== "") {
         quitarEspacios();
         let copiaAnterior = Object.values(pedidos[filaEditar - 2]);
         const update = [
@@ -280,8 +280,8 @@ async function editPedidos() {
             values: [copiaAnterior],
             valueInputOption: "USER_ENTERED"
         });
-        resaltarCampos();
-        getPedidos();
+        await resaltarCampos();
+        await getPedidos();
         guardarPdf();
     } else {
         alert("No se ha podido realizar la actualización, pedido no encontrado");
@@ -528,7 +528,7 @@ async function nuevoPedido() {
             getPedidos();
             cargado = 1;
         }
-    } else {
+    } else if( $pedido.value >=1 ){
         editPedidos();
     }
 }

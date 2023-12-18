@@ -44,7 +44,7 @@ var $rp1 = document.querySelector("#ptco1");
 var $rTele1 = document.querySelector("#telOR1");
 var $rTeleres1 = document.querySelector("#telRR1");
 
-var $rNomb2 = document.querySelector("#nombR3");
+var $rNomb2 = document.querySelector("#nombR2");
 var $rp2 = document.querySelector("#ptco2");
 var $rTele2 = document.querySelector("#telOR2");
 var $rTeleres2 = document.querySelector("#telRR2");
