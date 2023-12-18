@@ -444,8 +444,8 @@ async function buscarPedido() {
     }
 }
 
-async function nuevoPedido() {
-
+function nuevoPedido() {
+    getPedidos();
     if (!cargado || cargado !== 1 ) {
 
         if (pedidos.length >= 0 || !cargado) {
@@ -519,7 +519,7 @@ async function nuevoPedido() {
                 $observ.value
             ];
 
-            response = await gapi.client.sheets.spreadsheets.values.update({
+            response = gapi.client.sheets.spreadsheets.values.update({
                 spreadsheetId: '1zjjoOVeIl11Ytg5grWpP_Z4BxlEbjMJYwjNpLebGbSg',
                 range: `pedidos!A${filaNueva}:BJ${filaNueva}`,
                 values: [update],
