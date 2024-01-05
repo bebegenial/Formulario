@@ -113,9 +113,9 @@ async function guardarPdf() {
 }
 
 function validarCampos() {
-    if ($nombre1.value.length === 0 || $apellido.value.length === 0 || $direccion.value.length === 0 || $telefono.value.length === 0 
-        || $email.value.length === 0 || $ciudad.value.length === 0 || $cedula1.value.length === 0 || $relacionista.value.length === 0 
-        || $colaborador.value.length === 0 || $fecha.value.length === 0 || $fCobro.value.length === 0) {
+    if ($nombre1.value.length <= 2 || $apellido.value.length <= 2 || $direccion.value.length <= 2 || $telefono.value.length <= 5 
+        || $email.value.length <= 5 || $ciudad.value.length === 0 || $cedula1.value.length <= 5 || $relacionista.value.length <= 5 
+        || $colaborador.value.length <= 5 || $fecha.value.length <= 5 || $fCobro.value.length === 0) {
         return false;
     } else {
         //$pedido.value = (parseInt(pedidos[pedidos.length - 1].pedido) + 1);
