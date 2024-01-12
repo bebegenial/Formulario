@@ -178,7 +178,7 @@ async function resaltarCampos() {
         $ciudad.style.background = "transparent";
     }
 
-    if ($cedula1.value.length === 0) {
+    if ($cedula1.value.length <= 5) {
         $cedula1.style.background = "rgb(255, 209, 209)";
     } else {
         $cedula1.style.background = "white";
