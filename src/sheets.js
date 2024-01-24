@@ -448,7 +448,7 @@ async function nuevoPedido() {
     
     if (!cargado || cargado !== 1 ) {
 
-        if (pedidos.length >= 0 || !cargado) {
+        if (pedidos.length >= 0 || !cargado && cedula1.value.length >= 5) {
             quitarEspacios();
             const filaNueva = pedidos.length + 2;
             let pedidoNuevo = (parseInt(pedidos[pedidos.length - 1].pedido) + 1);
