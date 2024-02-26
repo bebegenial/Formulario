@@ -69,6 +69,7 @@ var $ce1 = document.querySelector("#ce1");
 var $relacionista = document.querySelector("#tomaCont");
 var $colaborador = document.querySelector("#especialista");
 var $director = document.querySelector("#director");
+$director.value = "Angelo Rodriguez";
 var $organizador = document.querySelector("#telCliente");
 
 var $cedula2 = document.querySelector("#cedula2");
@@ -79,6 +80,12 @@ var $cedula3 = document.querySelector("#cedula3");
 var $cedula4 = document.querySelector("#cedula4");
 let $inputs = document.querySelector(".inputs");
 const formulario = document.getElementById(".formulario");
+$cedula1.addEventListener('input', (event) => {
+    $cedula3.value = event.target.value;
+});
+$cedula2.addEventListener('input', (event) => {
+    $cedula4.value = event.target.value;
+});
 
 var $detColec = document.getElementById('detColec');
 var $detValor = document.getElementById('detValor');
