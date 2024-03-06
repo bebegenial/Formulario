@@ -63,6 +63,12 @@ function validarnombreyapellido(inputElement){
     return validacion;
 }
 
+function validandocampos(){
+    const validar = validarnombreyapellido($nombre1) && validarnombreyapellido($apellido) && validarnombreyapellido($ciudad)  && validardireccion($direccion) && validarcaracteres($direccion) && validarcaracteres($nNino) && validarcaracteres($email) && validaremail($email);
+
+    return validar;
+}
+
 /*funcion para generar la fecha*/
 
 function darfecha(inputElement){

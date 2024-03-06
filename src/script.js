@@ -246,7 +246,7 @@ opcion2Button.addEventListener('click', async function (event) {
         handleAuthClick();        
     } else {
         modal.style.display = 'none';
-        if (validarCampos() === true && $cedula1.value.length > 5) {
+        if (validarCampos() === true && $cedula1.value.length > 5 && validandocampos()) {
             event.preventDefault();
             await getPedidos();
             resaltarCampos();
