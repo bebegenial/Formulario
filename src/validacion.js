@@ -58,13 +58,13 @@ function validarRepetidos(inputElement) {
 
 function validarnombreyapellido(inputElement){
 
-    const validacion = validarnombre(inputElement) && validarcaracteres(inputElement) && validarvocalyconsonante(inputElement) && validarRepetidos(inputElement);
+    const validacion = validarnombre(inputElement) && validarcaracteres(inputElement) && validarRepetidos(inputElement);
 
     return validacion;
 }
 
 function validandocampos(){
-    const validar = validarnombreyapellido($nombre1) && validarnombreyapellido($apellido) && validarnombreyapellido($ciudad)  && validardireccion($direccion) && validarcaracteres($direccion) && validarcaracteres($nNino) && validarcaracteres($email) && validaremail($email);
+    const validar = validarnombreyapellido($nombre1) && validarnombreyapellido($apellido) && validarnombreyapellido($ciudad)  && validardireccion($direccion) && validarcaracteres($direccion) && validarcaracteres($nNino) && validarcaracteres($email) && validaremail($email) && $telefono.value >= 5;
 
     return validar;
 }
