@@ -7,14 +7,14 @@ function validarnombre(inputElement) {
 
 /*para validar que no hayan letras repetidas consecutivas*/
 function validarcaracteres(inputElement) {
-    const invalidDataPattern = /^(.)\3+$/;
+    const invalidDataPattern = /(\w)\1\1/;
   
     return !invalidDataPattern.test(inputElement.value);
 }
 
 /*para validar que no hayan letras repetidas consecutivas*/
 function validardireccion(inputElement) {
-    const regex = new RegExp(/^[a-zA-Z0-9\s#\-]{3,}$/);
+    const regex = new RegExp(/^[a-zA-Z0-9\s#\*\/\.\-]{4,}$/);
     
     return regex.test(inputElement.value);
 }
@@ -49,9 +49,9 @@ function validarRepetidos(inputElement) {
     
     for (let i = 0; i < value.length - 2; i++) {
         if (value[i] === value[i + 1] && value[i] === value[i + 2]) {
+            return false;
         }
-    }
-    
+    }    
     return true;
 }
 
