@@ -69,7 +69,7 @@ function validandocampos(){
     return validar;
 }
 
-function validarDatosingresados() {
+async function validarDatosingresados() {
     const nombre1 = $nombre1.value.trim();
     const apellido = $apellido.value.trim();
     const telefono = $telefono.value.trim();
@@ -81,10 +81,12 @@ function validarDatosingresados() {
     const existeCedula1 = pedidos.some(pedido => pedido.cedula1 === cedula1);
 
     if (existeNombre && existeApellido && existeTelefono && existeCedula1) {
-        //alert("Los datos ingresados ya existen en el array de pedidos.");
+        console("Los datos ingresados ya existen en pedidos.");
+        const Encontrado = pedidos.findIndex(pedidos => parseInt(pedidos.cedula1) === parseInt($cedula1.value));
+        const pedidoEncontrado = pedidos[Encontrado];
+        $pedido.value = parseInt(pedidoEncontrado.pedido);
         return false;
     }
-
     return true;
 }
 
