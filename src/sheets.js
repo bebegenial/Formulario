@@ -448,8 +448,6 @@ async function nuevoPedido() {
     
     if (!cargado || cargado !== 1 ) {
 
-        await validarDatosingresados()
-
         if ((pedidos.length >= 0 || !cargado) && (cedula1.value.length >= 5 && validarnombreyapellido($nombre1) && validarnombreyapellido($apellido) && validarnombreyapellido($ciudad)  && validardireccion($direccion) && validarcaracteres($direccion) && validarcaracteres($nNino) && validarcaracteres($email) && validaremail($email) && validarDatosingresados()) ) {
             quitarEspacios();
             const filaNueva = pedidos.length + 2;
