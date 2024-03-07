@@ -252,7 +252,11 @@ opcion2Button.addEventListener('click', async function (event) {
             resaltarCampos();
             await nuevoPedido();
             guardarPdf();     
-        } else {
+        } else if(validarCampos()) {
+            event.preventDefault();
+            alert("Debes llenar todos los campos requeridos")
+            resaltarCampos();
+        }else {
             event.preventDefault();
             alert("Debes llenar todos los campos requeridos")
             resaltarCampos();
