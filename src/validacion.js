@@ -14,7 +14,7 @@ function validarcaracteres(inputElement) {
 
 /*para validar que no hayan letras repetidas consecutivas*/
 function validardireccion(inputElement) {
-    const regex = new RegExp(/^[a-zA-Z0-9\s#\*\/\.\-]{4,}$/);
+    const regex = new RegExp(/^[a-zA-Z0-9\s#\*\/\.\-\,\:\;°\+]{5,}$/);
     
     return regex.test(inputElement.value);
 }
@@ -68,6 +68,26 @@ function validandocampos(){
 
     return validar;
 }
+
+function validarDatosingresados() {
+    const nombre1 = $nombre1.value.trim();
+    const apellido = $apellido.value.trim();
+    const telefono = $telefono.value.trim();
+    const cedula1 = $cedula1.value.trim();
+
+    const existeNombre = pedidos.some(pedido => pedido.nombre1 === nombre1);
+    const existeApellido = pedidos.some(pedido => pedido.apellido === apellido);
+    const existeTelefono = pedidos.some(pedido => pedido.telefono === telefono);
+    const existeCedula1 = pedidos.some(pedido => pedido.cedula1 === cedula1);
+
+    if (existeNombre && existeApellido && existeTelefono && existeCedula1) {
+        //alert("Los datos ingresados ya existen en el array de pedidos.");
+        return false;
+    }
+
+    return true;
+}
+
 
 /*funcion para generar la fecha*/
 

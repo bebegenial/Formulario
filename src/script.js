@@ -120,7 +120,7 @@ async function guardarPdf() {
 }
 
 function validarCampos() {
-    if ($nombre1.value.length <= 2 || $apellido.value.length <= 2 || $direccion.value.length <= 2 || $telefono.value.length <= 5 
+    if ($nombre1.value.length <= 2 || $apellido.value.length <= 2 || $direccion.value.length <= 4 || $telefono.value.length <= 5 
         || $email.value.length <= 5 || $ciudad.value.length === 0 || $cedula1.value.length <= 5 || $relacionista.value.length <= 5 
         || $colaborador.value.length <= 5 || $fecha.value.length <= 5 || $fCobro.value.length === 0) {
         return false;
