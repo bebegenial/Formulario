@@ -47,7 +47,7 @@ function validarnombreyapellido(inputElement){
 }
 
 function validandocampos(){
-    const validar = validarnombreyapellido($nombre1) && validarnombreyapellido($apellido) && validarnombreyapellido($ciudad)  && validardireccion($direccion) && validarcaracteres($direccion) && validarcaracteres($nNino) && validarcaracteres($email) && validaremail($email) && $telefono.value.length >= 5;
+    const validar = validarnombreyapellido($nombre1) && validarnombreyapellido($apellido) && validarnombreyapellido($ciudad)  && validardireccion($direccion) && validarcaracteres($direccion) && validarcaracteres($nNino) && validarcaracteres($email) && validaremail($email);
 
     return validar;
 }
@@ -68,6 +68,7 @@ async function validarDatosingresados() {
         const Encontrado = pedidos.findIndex(pedidos => parseInt(pedidos.cedula1) === parseInt($cedula1.value));
         const pedidoEncontrado = pedidos[Encontrado];
         $pedido.value = parseInt(pedidoEncontrado.pedido);
+        cargado = 1;
         return false;
     }
     return true;

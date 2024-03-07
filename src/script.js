@@ -246,10 +246,11 @@ opcion2Button.addEventListener('click', async function (event) {
         handleAuthClick();        
     } else {
         modal.style.display = 'none';
-        if (validarCampos() === true && $cedula1.value.length > 5 && validandocampos()) {
+        if (validarCampos() === true && validandocampos()) {
             event.preventDefault();
             await getPedidos();
             resaltarCampos();
+            await validarDatosingresados();
             await nuevoPedido();
             guardarPdf();     
         } else if(validarCampos()) {
