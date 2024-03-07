@@ -1,13 +1,13 @@
 /*para  validar que solo hayan letras en la variable*/
 function validarnombre(inputElement) {
-    const regex = new RegExp(/^[a-zA-ZÀ-ÿ ]*$/);
+    const regex = new RegExp(/^[a-zA-ZÀ-ÿ .,-]*$/);
     
     return regex.test(inputElement.value);
 }
 
 /*para validar que no hayan letras repetidas consecutivas*/
 function validarcaracteres(inputElement) {
-    const invalidDataPattern = /(\w)\1\1/;
+    const invalidDataPattern = /(\w)\1{3,}/;
   
     return !invalidDataPattern.test(inputElement.value);
 }
@@ -26,22 +26,10 @@ function validaremail(inputElement) {
     return emailPattern.test(inputElement.value);
 }
 
-/*comprobando que no hayan caracteres repetidos*/
-function validarRepetidos(inputElement) {
-    const value = inputElement.value.toLowerCase(); // Convertir el valor a minúsculas para simplificar la validación
-    
-    for (let i = 0; i < value.length - 2; i++) {
-        if (value[i] === value[i + 1] && value[i] === value[i + 2]) {
-            return false;
-        }
-    }    
-    return true;
-}
-
 
 function validarnombreyapellido(inputElement){
 
-    const validacion = validarnombre(inputElement) && validarcaracteres(inputElement) && validarRepetidos(inputElement);
+    const validacion = validarnombre(inputElement) && validarcaracteres(inputElement);
 
     return validacion;
 }
