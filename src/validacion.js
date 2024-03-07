@@ -1,6 +1,6 @@
 /*para  validar que solo hayan letras en la variable*/
 function validarnombre(inputElement) {
-    const regex = new RegExp(/^[a-zA-Z ]*$/);
+    const regex = new RegExp(/^[a-zA-ZÀ-ÿ ]*$/);
     
     return regex.test(inputElement.value);
 }
@@ -14,26 +14,9 @@ function validarcaracteres(inputElement) {
 
 /*para validar que no hayan letras repetidas consecutivas*/
 function validardireccion(inputElement) {
-    const regex = new RegExp(/^[a-zA-Z0-9\s#\*\/\.\-\,\:\;°\+]{5,}$/);
+    const regex = new RegExp(/^[a-zA-ZÀ-ÿ0-9\s#\*\/\.\-\,\:\;°\+]{5,}$/);
     
     return regex.test(inputElement.value);
-}
-
-/*para validar que no hayan vocales o consonantes consecutivas*/
-function validarvocalyconsonante(inputElement) {
-    const text = inputElement.value.toLowerCase();
-    const consonantPattern = /[bcdfghjklmnpqrstvwxyz]{3,}/;
-    const vowelPattern = /[aeiou]{3,}/;
-    
-    if (consonantPattern.test(text)) {
-        return false;
-    }
-    
-    if (vowelPattern.test(text)) {
-        return false;
-    }
-    
-    return true;
 }
 
 /*para validar el email*/
