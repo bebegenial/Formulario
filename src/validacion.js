@@ -1,20 +1,20 @@
 /*para  validar que solo hayan letras en la variable*/
 function validarnombre(inputElement) {
-    const regex = new RegExp(/^[a-zA-ZÀ-ÿ .,-]*$/);
+    const regex = new RegExp(/^[a-zA-ZÀ-ÿ0-9\/ .,-]*$/);
     
     return regex.test(inputElement.value);
 }
 
 /*para validar que no hayan letras repetidas consecutivas*/
 function validarcaracteres(inputElement) {
-    const invalidDataPattern = /(\w)\1{3,}/;
+    const invalidDataPattern = /(\w)\1{4,}/;
   
     return !invalidDataPattern.test(inputElement.value);
 }
 
 /*para validar que no hayan letras repetidas consecutivas*/
 function validardireccion(inputElement) {
-    const regex = new RegExp(/^[a-zA-ZÀ-ÿ0-9\s#\*\/\.\-\,\:\;°\+]{5,}$/);
+    const regex = new RegExp(/^[a-zA-ZÀ-ÿ0-9\s#\*\/\.\-\,\:\;°+\(\)\{\}\[\]\|\\<>\?\&\$\=\'\$\"\s_]*$/);
     
     return regex.test(inputElement.value);
 }
@@ -22,7 +22,8 @@ function validardireccion(inputElement) {
 /*para validar el email*/
 function validaremail(inputElement) {
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Expresión regular para validar el formato del correo electrónico
-    
+    alert("El correo electronico presenta errores (por ejemplo espacios entre el nombre), revisar y corregir");
+    $email.style.background = "rgb(255, 209, 209)";
     return emailPattern.test(inputElement.value);
 }
 
