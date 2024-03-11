@@ -22,8 +22,8 @@ function validardireccion(inputElement) {
 /*para validar el email*/
 function validaremail(inputElement) {
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Expresión regular para validar el formato del correo electrónico
-    alert("El correo electronico presenta errores (por ejemplo espacios entre el nombre), revisar y corregir");
-    $email.style.background = "rgb(255, 209, 209)";
+    //alert("El correo electronico presenta errores (por ejemplo espacios entre el nombre), revisar y corregir");
+    //$email.style.background = "rgb(255, 209, 209)";
     return emailPattern.test(inputElement.value);
 }
 
