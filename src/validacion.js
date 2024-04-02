@@ -14,7 +14,7 @@ function validarcaracteres(inputElement) {
 
 /*para validar que no hayan letras repetidas consecutivas*/
 function validardireccion(inputElement) {
-    const regex = new RegExp(/^[a-zA-ZÀ-ÿ0-9\s#\*\/\.\-\,\:\;°+\(\)\{\}\[\]\|\\<>\?\&\$\=\'\$\"\s_]*$/);
+    const regex = new RegExp(/^[a-zA-ZÀ-ÿ0-9\s#\*\/\.\-\,\:\;°+\(\)\{\}\[\]\|\\<>\?\&\$\=\'\$\"\s_—]*$/);
     
     return regex.test(inputElement.value);
 }
