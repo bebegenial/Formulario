@@ -69,7 +69,7 @@ var $ce1 = document.querySelector("#ce1");
 var $relacionista = document.querySelector("#tomaCont");
 var $colaborador = document.querySelector("#especialista");
 var $director = document.querySelector("#director");
-$director.value = "Angelo Rodriguez";
+$director.value = "Eliana V. / ";
 var $organizador = document.querySelector("#telCliente");
 
 var $cedula2 = document.querySelector("#cedula2");
