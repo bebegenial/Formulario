@@ -122,7 +122,7 @@ async function getPedidos() {
         const rangeSeb = sebastian.result;
         rangeSeb.values.forEach((fila2) => {
             //guardamos los datos de los pedidos en el sheet en un objeto
-            if (isNaN(parseInt(fila2[0]))) return;
+            if (isNaN(parseInt(fila2[4]))) return;
             const nuevoPedidoSeb = {
                 pedido: fila2[0],
                 fecha: fila2[1],
