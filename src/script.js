@@ -78,13 +78,17 @@ var $ce2 = document.querySelector("#ce2");
 
 var $cedula3 = document.querySelector("#cedula3");
 var $cedula4 = document.querySelector("#cedula4");
+var $cedula5 = document.querySelector("#cedula5");
+var $cedula6 = document.querySelector("#cedula6");
 let $inputs = document.querySelector(".inputs");
 const formulario = document.getElementById(".formulario");
 $cedula1.addEventListener('input', (event) => {
     $cedula3.value = event.target.value;
+    $cedula5.value = event.target.value;
 });
 $cedula2.addEventListener('input', (event) => {
     $cedula4.value = event.target.value;
+    $cedula6.value = event.target.value;
 });
 
 var $detColec = document.getElementById('detColec');

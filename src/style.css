@@ -68,7 +68,11 @@ img{
 }
 
 p {
-    font-size: 16px;
+    font-size: 13px;
+}
+
+b {
+    font-weight: bold;
 }
 
 .datoEmp{
@@ -823,6 +827,16 @@ li{
     max-height: 23mm;
 }
 
+.firmaCedHuellas2{
+    display: block;
+    position: relative;
+    margin: 1mm 1mm 0 1mm;
+    min-width: 170mm;
+    max-width: 170mm;
+    min-height: 23mm;
+    max-height: 23mm;
+}
+
 .huella2{
     position: static;
     display: inline-flex;
@@ -835,7 +849,7 @@ li{
     background-color: white;
 }
 
-#cedula3, #cedula4{
+#cedula3, #cedula4, #cedula5, #cedula6{
     position: relative;
     display: inline-flex;
     border-top: 1px black solid;
@@ -923,10 +937,10 @@ li{
     justify-content: center;
     align-items: center;
     margin: 2px red;
-    min-width: 196mm;
-    max-width: 196mm;
-    min-height: 400mm;
-    max-height: 400mm;
+    min-width: 190mm;
+    max-width: 190mm;
+    min-height: 330mm;
+    max-height: 330mm;
     top: 0;
     left: 0;
     right: 0;
