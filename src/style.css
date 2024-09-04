@@ -2,10 +2,11 @@ html, body{
     position: absolute;
     min-width: 216mm;
     max-width: 216mm;
-    min-height: 1400mm;
-    max-height: 1400mm;
+    min-height: 680mm;
+    max-height: 680mm;
     margin: 1mm 0 0 0;
     padding: 0;
+    border: red solid;
 }
 
 * {
