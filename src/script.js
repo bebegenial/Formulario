@@ -254,7 +254,7 @@ opcion2Button.addEventListener('click', async function (event) {
             event.preventDefault();
             await getPedidos();
             resaltarCampos();
-            await validarDatosingresados();
+            //await validarDatosingresados();
             await nuevoPedido();
             guardarPdf();     
         } else if(validarCampos()) {
