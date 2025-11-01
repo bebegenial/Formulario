@@ -204,8 +204,8 @@ h1, #nitE{
 }
 
 #celular, #telefonoEmp{
-    min-width: 24mm;
-    max-width: 24mm;
+    min-width: 22mm;
+    max-width: 22mm;
     font-weight: bold;
     font-size: 65%;
 }
