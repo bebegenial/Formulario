@@ -204,8 +204,8 @@ h1, #nitE{
 }
 
 #celular, #telefonoEmp{
-    min-width: 22mm;
-    max-width: 22mm;
+    min-width: 21mm;
+    max-width: 21mm;
     font-weight: bold;
     font-size: 65%;
 }
@@ -235,8 +235,8 @@ h1, #nitE{
 }
 
 #dirEmpr{
-    min-width: 38mm;
-    max-width: 38mm;
+    min-width: 37mm;
+    max-width: 37mm;
     font-weight: bold;
 }
 
