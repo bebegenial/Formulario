@@ -36,7 +36,8 @@ function validarnombreyapellido(inputElement){
 }
 
 function validandocampos(){
-    const validar = validarnombreyapellido($nombre1) && validarnombreyapellido($apellido) && validarnombreyapellido($ciudad)  && validardireccion($direccion) && validarcaracteres($direccion) && validarcaracteres($nNino) && validarcaracteres($email) && validaremail($email);
+    /*const validar = validarnombreyapellido($nombre1) && validarnombreyapellido($apellido) && validarnombreyapellido($ciudad)  && validardireccion($direccion) && validarcaracteres($direccion) && validarcaracteres($nNino) && validarcaracteres($email) && validaremail($email);*/
+    const validar = validarnombreyapellido($nombre1) && validarnombreyapellido($apellido) && validarnombreyapellido($ciudad) && validarcaracteres($nNino) && validarcaracteres($email) && validaremail($email);
 
     return validar;
 }
